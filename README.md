@@ -3,7 +3,12 @@ Peng Sicheng's resume
 ##介绍
 使用React搭建可复用web简历
 ##使用
-配置
+配置环境
+```
+npm install
+npm run dev
+```
+引入组件
 ```
 import Resume from './components/resume.js'
 render(
