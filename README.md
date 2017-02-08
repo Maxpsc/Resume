@@ -36,7 +36,8 @@ const user = {
 			{
 				"name":"",
 				"duration":["",""],
-				"description":[""]
+				"description":[""],
+				"duty":[""]
 			}
 		],
     //工作经验		

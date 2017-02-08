@@ -15,26 +15,27 @@ class Resume extends Component {
 					PropTypes.shape({
 						name:PropTypes.string.isRequired,
 						level:PropTypes.string.isRequired,
-						description:PropTypes.string.isRequired
+						description:PropTypes.string.isRequired,
 					})),
 				projects:PropTypes.arrayOf(
 					PropTypes.shape({
 						name:PropTypes.string.isRequired,
 						duration:PropTypes.arrayOf(PropTypes.string),
-						description:PropTypes.arrayOf(PropTypes.string)
+						description:PropTypes.arrayOf(PropTypes.string),
+						duty:PropTypes.arrayOf(PropTypes.string),
 					})),
 				experience:PropTypes.arrayOf(
 					PropTypes.shape({
 						company:PropTypes.string.isRequired,
 						duration:PropTypes.arrayOf(PropTypes.string),
 						position:PropTypes.string.isRequired,
-						work:PropTypes.string.isRequired
+						work:PropTypes.string.isRequired,
 					})),
 				education:PropTypes.arrayOf(
 					PropTypes.shape({
 						school:PropTypes.string.isRequired,
 						duration:PropTypes.arrayOf(PropTypes.string),
-						degree:PropTypes.string.isRequired
+						degree:PropTypes.string.isRequired,
 					})),
 				contact:PropTypes.shape({
 					email:PropTypes.string.isRequired,
