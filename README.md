@@ -1,14 +1,14 @@
-# Resume
+# Resume  
 Peng Sicheng's resume
-##介绍
+## 介绍
 使用React搭建可复用web简历
-##使用
+## 使用  
 配置环境
 ```
 npm install
 npm run dev
 ```
-引入组件
+引入组件  
 ```
 import Resume from './components/resume.js'
 render(
@@ -16,7 +16,7 @@ render(
 	container
 );
 ```
-简历文本:
+简历文本:  
 ```
 const user = {
 	"zh":{
@@ -69,7 +69,7 @@ const user = {
 	"en":{},//同上
 }
 ```
-##特点:
+## 特点:  
 1、自定义简历内容，单页应用;<br>
 2、支持多语言扩展，预留语言切换功能；<br>
 3、预留简洁和完整功能的区分；<br>
