@@ -27,19 +27,29 @@ class Content extends Component {
 
 		let projectList = projects.map((item,index)=>{
 			let descriptions = item.description.map((item,index)=><li key={index}>{item}</li>)
-			let duties = item.duty.map((item,index)=><li key={index}>{item}</li>)
+			let duties;
+			if(item.duty){
+				duties = item.duty.map((item,index)=><li key={index}>{item}</li>)
+			}
 			return (
 				<li key={index}>
 					<h3>{item.name}</h3>
-					<h4>前端开发<i>{item.duration[0]}{item.duration[1]!=null ? ` - ${item.duration[1]}` : ""}</i></h4>
+					<h4><i>{item.duration[0]}{item.duration[1]!=null ? ` - ${item.duration[1]}` : ""}</i></h4>
 					<h5>项目描述</h5>
 					<ul>
 						{descriptions}
 					</ul>
-					<h5>项目职责</h5>
-					<ul>
-						{duties}
-					</ul>
+					{
+						(duties && duties.length!==0) ?
+						(
+							<div>
+								<h5>项目职责</h5>
+								<ul>
+									{duties}
+								</ul>
+							</div>
+						) : null
+					}
 				</li>
 			)
 		})
@@ -75,6 +85,10 @@ class Content extends Component {
 				</div>
 				<div className={style.main}>
 					<section>
+						<h1>{lang=="zh"? "技能" : "Skills"}</h1>
+						{skillList}
+					</section>
+					<section>
 						<h1>{lang=="zh"? "工作经历" : "Experience"}</h1>
 						<ul className={style.projectList}>
 							{experienceList}
@@ -85,10 +99,6 @@ class Content extends Component {
 						<ul className={style.projectList}>
 							{projectList}
 						</ul>
-					</section>
-					<section>
-						<h1>{lang=="zh"? "技能" : "Skills"}</h1>
-						{skillList}
 					</section>
 					<section>
 						<h1>{lang=="zh"? "教育背景" : "Education"}</h1>

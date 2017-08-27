@@ -7,22 +7,22 @@ const user = {
 	"zh":{
 		"name":"彭斯诚",
 		"position":"前端开发工程师",
-		"introduction":"我经历了使用jquery选择符操作DOM元素，到习惯Angular的双向数据绑定但纠结于父子作用域的通信，到现在的学习React，并将ES6语法应用于实战的过程。希望进入技术氛围浓厚的团队来督促自己，和同伴一起进步，能有志同道合的同事就再好不过了。",
+		"introduction":"",
 		"skills":[
 			{
-				"name":"Html(5)",
+				"name":"React",
 				"level":"70",
-				"description":"了解标签语义化，合理构建DOM树。"
+				"description":"react-router4, redux, 实现常用组件，合理设计state结构"
 			},
 			{
-				"name":"Javascript",
+				"name":"JS(browser, node)",
 				"level":"80",
-				"description":"原生JS基础扎实，有OOP编程经验。熟练使用Angular，正在学习react+redux构建组件化单页应用。掌握gulp, webpack前端构建工具。掌握ES2015部分新特性。"
+				"description":"ES3, ES5, ES6+, NPM scripts, webpack打包优化, karma+jasmine自动化单元测试, 使用express实现服务端业务"
 			},
 			{
-				"name":"Css(3)",
+				"name":"angular",
 				"level":"80",
-				"description":"掌握各种页面布局和样式特效，熟练使用SASS，初步应用CSS module。"
+				"description":"angular 1.X, AMD模块化 "
 			},
 		],
 		"projects":[
@@ -31,43 +31,54 @@ const user = {
 				"duration":["2016.10","2016.12"],
 				"description":
 				["基于AngularJS开发的PC端旅游信息管理系统，用于省、市、区内服务设施和具体旅游景区的数据录入、预览;",
-				"录入数据方式包括文字输入，上传、裁剪图片，上传音频视频，基于高德地图选择景区地理位置，在平面图上选取相对位置等;",
+				"录入数据方式包括文字输入，上传、裁剪图片，上传音频视频，基于高德地图选择景区地理位置，在平面图上选取相对位置等;"
 				],
 				"duty":
 				["根据产品需求做技术选型，并进行前端页面的开发，后期维护，重构等工作;",
 				"与产品团队沟通需求和协商功能，确保最佳实现方案;",
-				"与后端开发人员协商数据接口并对接;",
+				"与后端开发人员协商数据接口并对接;"
 				]
 			},
 			{
-				"name":"绚丽甘肃旅游网",
-				"duration":["2016.8","2016.9"],
+				"name":"WEB失陷检测工具",
+				"duration": ["2017.3","2017.5"],
 				"description":
-				["网站用来展示景区文本类信息，以及诸如音频、视频的播放与控制;",
-				"基于AngularJS实现页面路由，音频（解说）控制，全景图拖拽，图片轮播等功能;",
-				"调用高德地图api，实现景区的坐标定位以及推荐路线的展示。",
-				],
+				["回收网络日志，根据制定规则给出分析结果，并根据已有数据和模板生成报告","详细不便透露"],
 				"duty":
-				["与后端开发人员协商数据接口并对接;",
-				"根据产品需求做技术选型，并进行前端页面的开发，后期维护，重构等工作。"
-				]
+				["使用ng1开发，并配置require和ui-router实现单页应用资源的按需加载","基于D3或echarts, 根据需求开发可复用的可视化组件", "持续优化页面样式和JS性能", "搭建单元测试环境"]
 			},
 			{
-				"name":"各类主题宣传页面",
-				"duration":["2015","2016"],
+				"name":"开源博客网站-Ocean",
+				"duration": ["2017,6","至今"],
 				"description":
-				["IStudy学习资料分享网站，提供课程资料下载，允许根据关键字搜索课程资料;",
-				"成都太古里活动页，静态展示页面，具有上传图片、提交报名信息等功能;",
-				"南京美食节移动端宣传页;"
+				[
+					"具体项目见https://github.com/Maxpsc/Ocean",
+					"技术栈：数据库mongodb, mongoose; 后端node, express; 前端react, redux, es6, material-ui"
 				],
 				"duty":
-				["根据设计需求开发前端页面，有时参与设计环节;",]
+				["个人项目，负责全部UI设计和业务实现"]
 			},
+			{
+				"name":"各类数据可视化组件的开发",
+				"duration":["2017.3","至今"],
+				"description":
+				[
+					"使用D3.js开发可拖拽选取柱状统计图",
+					"D3实现正多边形生成器，并可拓展为可拖拽多维能力图",
+					"使用echarts开发大屏实时攻击监测平台，展示地图多点间攻击，利用饼状图、柱状图、列表统计攻击IP与被攻击host的相关数据"
+				]
+			}
 		],
 		"experience":[
 			{
+				"company":"360企业安全",
+				"duration":["2017.3","至今"],
+				"position":"前端开发工程师",
+				"work":"负责web失陷检测工具、POC scanner的前端开发，搭建自动化工程和单元测试环境，基于D3和echarts开发数据可视化组件，业余时间编写类underscore的工具函数库。"
+			},
+			{
 				"company":"北京博翰时空创新科技有限公司",
-				"duration":["2016-7","至今"],
+				"duration":["2016-7","2017.2"],
 				"position":"Web前端工程师",
 				"work":"使用angularJS搭建PC端旅游委后台管理系统（SPA）。使用原生js和angularJS实现分页、弹窗、日历等基础组件。开发甘肃旅游主题网站等。"
 			},
@@ -86,10 +97,10 @@ const user = {
 			}
 		],
 		"contact":{
-			"email":"majiapsc@126.com",
-			"qq":"",
-			"cellPhone":"13*****1786",
-			"gitHub":"https://github.com/maxpschub",
+			"email":"个人: majiapsc@126.com 企业: 	pengsicheng@b.360.cn",
+			"qq":"2654310198",
+			"cellPhone":"13255291786",
+			"gitHub":"https://github.com/Maxpsc",
 			"location":"中国 北京"
 		}
 	},

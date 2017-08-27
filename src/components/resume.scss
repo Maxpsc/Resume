@@ -33,6 +33,7 @@ html,body,#container{height:100%;}
 .wrap{
 	width:100%;
 	background:linear-gradient((top left),#FFF,$cyan 70%,#000);
+	background:-webkit-linear-gradient((top left),#FFF,$cyan 70%,#000);
 	header{
 		position:relative;
 		height:80px;
@@ -43,7 +44,7 @@ html,body,#container{height:100%;}
 			font-weight: normal;
 		}
 	}
-	
+
 }
 .resume{
 		@include border-box;
@@ -127,7 +128,7 @@ html,body,#container{height:100%;}
 				}
 			}
 		}
-		
+
 		.projectList{
 			/* margin-left:20%; */
 			overflow: hidden;
@@ -155,7 +156,7 @@ html,body,#container{height:100%;}
 				}
 				ul{
 					li{
-						list-style-type:disc; 
+						list-style-type:disc;
 						margin:0 0 0 20px;
 						font-size: 14px;
 						line-height: 24px;
