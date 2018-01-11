@@ -15,10 +15,10 @@ class Content extends Component {
 			progress = full.substring(0,length);
 			rest = full.substring(length,full.length);
 			return (
-				<div className={style.skill} key={index}>
+				<div className={style.skill} key={index} title={item.level + "%"}>
 					<h1 className={style.note}>{item.name}</h1>
 					<p>{item.description}</p>
-					<span className={style.progressBar} title={item.level+"%"}>
+					<span className={style.progressBar}>
 						<b>{progress}</b>{rest}
 					</span>
 				</div>

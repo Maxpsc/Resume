@@ -10,14 +10,19 @@ const user = {
 		"introduction":"",
 		"skills":[
 			{
+				"name":"Vue",
+				"level": "80",
+				"description":"vue-router, vuex, 深度使用，了解原理，应用于大规模应用的开发"
+			},
+			{
 				"name":"React",
-				"level":"70",
+				"level":"60",
 				"description":"react-router4, redux, 实现常用组件，合理设计state结构"
 			},
 			{
 				"name":"JS(browser, node)",
 				"level":"80",
-				"description":"ES3, ES5, ES6+, NPM scripts, webpack打包优化, karma+jasmine自动化单元测试, 使用express实现服务端业务"
+				"description":"ES5, ES6+, NPM scripts, express, webpack打包优化"
 			},
 			{
 				"name":"angular",
@@ -26,6 +31,42 @@ const user = {
 			},
 		],
 		"projects":[
+			{
+				"name": "网络威胁态势感知系统",
+				"duration": ["2017.10", "至今"],
+				"description":
+					[
+						"使用vue, vuex, vue-router, 基于element-ui封装私有组件负责内部安全监测app的前端开发",
+						"D3实现可拖拽选取范围柱状统计图",
+						"Three.js实现3D地球可视化预研"
+					]
+			},
+			{
+				"name": "各类数据可视化组件的开发",
+				"duration": ["2017.3", "2017.10"],
+				"description":
+					[
+						"D3实现正多边形生成器，并可拓展为可拖拽多维能力图",
+						"使用echarts开发大屏实时攻击监测平台，展示地图多点间攻击，利用饼状图、柱状图、列表统计攻击IP与被攻击host的相关数据"
+					]
+			},
+			{
+				"name": "开源博客网站-Ocean",
+				"duration": ["2017,6", "至今"],
+				"description":
+					[
+						"具体项目见https://github.com/Maxpsc/Ocean",
+						"技术栈：数据库mongodb, mongoose; 后端node, express; 前端react, redux, es6, material-ui"
+					]
+			},
+			{
+				"name": "WEB失陷检测工具",
+				"duration": ["2017.3", "2017.5"],
+				"description":
+					["回收网络日志，根据制定规则给出分析结果，并根据已有数据和模板生成报告"],
+				"duty":
+					["使用ng1开发，并配置require和ui-router实现单页应用资源的按需加载", "基于D3或echarts, 根据需求开发可复用的可视化组件", "持续优化页面样式和JS性能，搭建单元测试环境"]
+			},
 			{
 				"name":"壹程旅游后台信息管理系统",
 				"duration":["2016.10","2016.12"],
@@ -38,35 +79,6 @@ const user = {
 				"与产品团队沟通需求和协商功能，确保最佳实现方案;",
 				"与后端开发人员协商数据接口并对接;"
 				]
-			},
-			{
-				"name":"WEB失陷检测工具",
-				"duration": ["2017.3","2017.5"],
-				"description":
-				["回收网络日志，根据制定规则给出分析结果，并根据已有数据和模板生成报告","详细不便透露"],
-				"duty":
-				["使用ng1开发，并配置require和ui-router实现单页应用资源的按需加载","基于D3或echarts, 根据需求开发可复用的可视化组件", "持续优化页面样式和JS性能", "搭建单元测试环境"]
-			},
-			{
-				"name":"开源博客网站-Ocean",
-				"duration": ["2017,6","至今"],
-				"description":
-				[
-					"具体项目见https://github.com/Maxpsc/Ocean",
-					"技术栈：数据库mongodb, mongoose; 后端node, express; 前端react, redux, es6, material-ui"
-				],
-				"duty":
-				["个人项目，负责全部UI设计和业务实现"]
-			},
-			{
-				"name":"各类数据可视化组件的开发",
-				"duration":["2017.3","至今"],
-				"description":
-				[
-					"使用D3.js开发可拖拽选取柱状统计图",
-					"D3实现正多边形生成器，并可拓展为可拖拽多维能力图",
-					"使用echarts开发大屏实时攻击监测平台，展示地图多点间攻击，利用饼状图、柱状图、列表统计攻击IP与被攻击host的相关数据"
-				]
 			}
 		],
 		"experience":[
@@ -74,7 +86,7 @@ const user = {
 				"company":"360企业安全",
 				"duration":["2017.3","至今"],
 				"position":"前端开发工程师",
-				"work":"负责web失陷检测工具、POC scanner的前端开发，搭建自动化工程和单元测试环境，基于D3和echarts开发数据可视化组件，业余时间编写类underscore的工具函数库。"
+				"work":"负责web失陷检测工具、POC scanner的前端开发，基于D3和echarts开发数据可视化组件。负责网络威胁态势感知系统-安全检测模块的开发工作，优化webpack打包策略。"
 			},
 			{
 				"company":"北京博翰时空创新科技有限公司",
@@ -97,7 +109,7 @@ const user = {
 			}
 		],
 		"contact":{
-			"email":"个人: majiapsc@126.com 企业: 	pengsicheng@b.360.cn",
+			"email":"个人: majiapsc@126.com 企业: 	pengsicheng@360.net",
 			"qq":"2654310198",
 			"cellPhone":"13255291786",
 			"gitHub":"https://github.com/Maxpsc",
