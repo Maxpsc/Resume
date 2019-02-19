@@ -34,7 +34,13 @@ class Content extends Component {
 			return (
 				<li key={index}>
 					<h3>{item.name}</h3>
-					<h4><i>{item.duration[0]}{item.duration[1]!=null ? ` - ${item.duration[1]}` : ""}</i></h4>
+					{
+						item.duration && item.duration.length === 2
+							? (
+								<h4><i>{item.duration[0]}{item.duration[1]!=null ? ` - ${item.duration[1]}` : ""}</i></h4>
+							)
+							: null
+					}
 					<h5>项目描述</h5>
 					<ul>
 						{descriptions}
@@ -86,7 +92,9 @@ class Content extends Component {
 				<div className={style.main}>
 					<section>
 						<h1>{lang=="zh"? "技能" : "Skills"}</h1>
-						{skillList}
+						<div className={style.skillWrap}>
+							{skillList}
+						</div>
 					</section>
 					<section>
 						<h1>{lang=="zh"? "工作经历" : "Experience"}</h1>

@@ -110,15 +110,13 @@ html,body,#container{height:100%;}
 			font-style: italic;
 			color:darken(#CCC,20%);
 		}
+		.skillWrap {
+			display: flex;
+		}
 		.skill{
 			@include border-box;
-			width:50%;
-			float:left;
-			margin-bottom: 10px;
+			flex: 1;
 			padding: 0 10px;
-			&:nth-child(2n+1){
-				// border-left: darken(#CCC,50%) dotted 1px;
-			}
 			@media screen and (max-width: 480px){
 				text-align: center;
 			}
