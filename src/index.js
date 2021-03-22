@@ -20,9 +20,9 @@ const user = {
 				"description":"日常应用，sdk定义，约束类型"
 			},
 			{
-				"name":"JS(browser, node)",
+				"name":"JS (browser, node)",
 				"level":"80",
-				"description":"ES5, ES6+, NPM scripts, express, webpack打包优化"
+				"description":"ES5, ES6+, NPM scripts"
 			},
 			{
 				"name":"Vue",
@@ -33,7 +33,7 @@ const user = {
 		"projects":[
 			{
 				"name": "移动端银行产品资产沉淀",
-				"duration": ["持续"],
+				"duration": ["2020.1", "至今"],
 				"description": [
 					"mybank-hooks, mybank-utils, mybank-components",
 					"主导通用hooks、工具函数和UI、业务组件的封装沉淀",
@@ -78,7 +78,7 @@ const user = {
 			},
 			{
 				"name": "滴滴先锋",
-				"duration": ["2018.5", "至今"],
+				"duration": ["2018.5", "2019.3"],
 				"description": [
 					"一个为商务推广人员提供的方便签约、管理商家的工具",
 					"webapp，通过jsBridge与端通信并调用原生能力",
@@ -88,7 +88,7 @@ const user = {
 			},
 			{
 				"name": "外卖mis系统",
-				"duration": ["2018.4", "至今"],
+				"duration": ["2018.4", "2019.3"],
 				"description": [
 					"参与设计并实现可配置化高阶组件如form, table",
 					"需求评审，业务开发"

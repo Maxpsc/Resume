@@ -112,6 +112,7 @@ html,body,#container{height:100%;}
 		}
 		.skillWrap {
 			display: flex;
+			overflow: auto;
 		}
 		.skill{
 			@include border-box;

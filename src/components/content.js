@@ -41,7 +41,7 @@ class Content extends Component {
 							)
 							: null
 					}
-					<h5>项目描述</h5>
+					{/* <h5>项目描述</h5> */}
 					<ul>
 						{descriptions}
 					</ul>
