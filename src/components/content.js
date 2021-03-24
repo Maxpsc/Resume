@@ -33,14 +33,14 @@ class Content extends Component {
 			}
 			return (
 				<li key={index}>
-					<h3>{item.name}</h3>
-					{
+					<h3>{item.name}{
 						item.duration && item.duration.length === 2
 							? (
-								<h4><i>{item.duration[0]}{item.duration[1]!=null ? ` - ${item.duration[1]}` : ""}</i></h4>
+								<span><i>{item.duration[0]}{item.duration[1]!=null ? ` - ${item.duration[1]}` : ""}</i></span>
 							)
 							: null
-					}
+					}</h3>
+					
 					{/* <h5>项目描述</h5> */}
 					<ul>
 						{descriptions}
