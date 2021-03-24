@@ -17,7 +17,7 @@ const user = {
 			{
 				"name":"Typescript",
 				"level":"60",
-				"description":"日常应用，sdk定义，约束类型"
+				"description":"日常应用，sdk定义"
 			},
 			{
 				"name":"JS (browser, node)",
