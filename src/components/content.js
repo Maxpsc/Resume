@@ -14,15 +14,19 @@ class Content extends Component {
 			let length = ~~(item.level/10);
 			progress = full.substring(0,length);
 			rest = full.substring(length,full.length);
-			return (
-				<div className={style.skill} key={index} title={item.level + "%"}>
-					<h1 className={style.note}>{item.name}</h1>
-					<p>{item.description}</p>
-					<span className={style.progressBar}>
-						<b>{progress}</b>{rest}
-					</span>
-				</div>
-			)
+			// return (
+			// 	<div className={style.skill} key={index} title={item.level + "%"}>
+			// 		<h1 className={style.note}>{item.name}</h1>
+			// 		<p>{item.description}</p>
+			// 		<span className={style.progressBar}>
+			// 			<b>{progress}</b>{rest}
+			// 		</span>
+			// 	</div>
+			// )
+			// UI升级，标签形式展现技术栈
+			return <div className={style.skillTag} key={index}>
+				{item.name}
+			</div>
 		})
 
 		let projectList = projects.map((item,index)=>{
@@ -91,7 +95,7 @@ class Content extends Component {
 				</div>
 				<div className={style.main}>
 					<section>
-						<h1>{lang=="zh"? "技能" : "Skills"}</h1>
+						<h1>{lang=="zh"? "Keywords" : "Skills"}</h1>
 						<div className={style.skillWrap}>
 							{skillList}
 						</div>
@@ -103,7 +107,7 @@ class Content extends Component {
 						</ul>
 					</section>
 					<section>
-						<h1>{lang=="zh"? "项目介绍" : "Projects"}</h1>
+						<h1>{lang=="zh"? "主要项目介绍" : "Projects"}</h1>
 						<ul className={style.projectList}>
 							{projectList}
 						</ul>

@@ -112,7 +112,20 @@ html,body,#container{height:100%;}
 		}
 		.skillWrap {
 			display: flex;
-			overflow: auto;
+			// overflow: auto;
+			// justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+		.skillTag {
+			display: inline-flex;
+			padding: 4px 8px;
+			background: #fff;
+			color: lighten($cyan,20%);
+			border: lighten($cyan,20%) solid 1px;
+			border-radius: 10px;
+			font-size: 14px;
+			font-weight: bold;
 		}
 		.skill{
 			@include border-box;
