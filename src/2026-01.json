@@ -1,0 +1,166 @@
+{
+  "zh": {
+    "name": "彭斯诚",
+    "position": "前端开发专家",
+    "introduction": "",
+    "skills": [
+      {
+        "name": "React Vue TS Node NestJS"
+      },
+      {
+        "name": "AI Agentic Langgraph RAG"
+      },
+      {
+        "name": "Lowcode PPT-editor"
+      }
+    ],
+    "projects": [
+      {
+        "name": "【快手】物料平台-结合AI赋能物料消费场景",
+        "duration": ["2025.04", "至今"],
+        "content": [
+          "主导物料平台从0到1的智能化升级，打造AI小助手",
+          "支持自然语言、图片及Figma链接输入",
+          "基于langgraph实现多智能体服务架构，具备意图识别、动态扩展、多轮对话、流式输出等能力"
+        ],
+        "achievements": [
+          "实现[需求输入-组件匹配-代码生成-预览]一站式流程",
+          "封装通用D2P（设计稿转原型）服务，支持属性生成与组件替换",
+          "服务于内部多个上层低码应用"
+        ]
+      },
+      {
+        "name": "【快手】物料平台度量体系",
+        "duration": ["2024.01", "2024.12"],
+        "content": [
+          "统计物料平台现状，和各形式物料在商业化前端应用的落地情况",
+          "度量SDK：扫描应用的页面路由信息和对指定物料的引用情况"
+        ],
+        "achievements": [
+          "物料平台-数据概览：定时任务收集各前端应用物料引用情况",
+          "平台前端消费并展示大屏数据",
+          "暴露openAPI供其他团队获取物料消费数据"
+        ]
+      },
+      {
+        "name": "【快手】智能案例工具（在线PPT编辑器）",
+        "duration": ["2023.08", "2024.02"],
+        "content": [
+          "为业务拜访场景提高案例质量，降低编辑成本",
+          "基于低代码引擎实现类 PowerPoint 的在线编辑与预览能力",
+          "根据模板和业务指标一键生成多页PPT"
+        ],
+        "achievements": [
+          "支持基于浏览器的 PPT & PDF 文件导出",
+          "包括表单渲染、模板配置及开发等完整功能"
+        ]
+      },
+      {
+        "name": "【快手】渠道前端架构升级",
+        "duration": ["2021.12", "至今"],
+        "content": [
+          "服务商多平台改造",
+          "改造为 monorepo，支持组件库、工具函数跨项目复用",
+          "对移动端高频访问页面进行双端适配"
+        ],
+        "achievements": [
+          "实现统一适配 SDK 和双端组件库",
+          "业务行为数据看板搭建，定义核心链路并监控"
+        ]
+      },
+      {
+        "name": "【蚂蚁】移动端前端资产沉淀",
+        "duration": ["2020.01", "2020.06"],
+        "content": [
+          "主导通用工具函数、hooks和UI组件的整合，并负责核心逻辑开发",
+          "结合银行SPA应用特点和统一前端技术栈（react+antdm+ts+hooks）的前提，实现基于hooks的状态管理框架",
+          "通用request，中间件机制参考koa洋葱模型，并实现监控、轮询、错误处理、免登等中间件"
+        ],
+        "achievements": [
+          "输出mybank-hooks, mybank-utils, mybank-components作为资产沉淀",
+          "解决H5逻辑分散、管理混乱、外包质量不可控等问题",
+          "实现质量可控，开发提效（快速创建、代码复用）"
+        ]
+      },
+      {
+        "name": "【蚂蚁】开放银行前端能力",
+        "duration": ["2021.02", "2021.05"],
+        "content": [
+          "网商银行个人转账收银台开发",
+          "个人开户sdk开发，支持网商全功能二类户",
+          "存款产品sdk开发"
+        ],
+        "achievements": [
+          "对外输出sdk、组件、页面三种接入方式",
+          "兼容支付宝和网商银行app",
+          "网商银行定活宝、随意存等存款产品的核心逻辑抽象"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "北京达佳信息互联有限公司（快手）",
+        "duration": ["2021.06", "至今"],
+        "position": "前端开发专家",
+        "work": "业务侧负责快手商业化渠道方向（代理商平台），主导渠道前端工程整体架构升级，日常需求迭代和人员管理等。技术侧参与低代码平台开发，负责商业化前端物料中心消费和AI部分工作。"
+      },
+      {
+        "company": "北京蚂蚁云金融信息服务有限公司",
+        "duration": ["2019.04", "2021.05"],
+        "position": "高级前端工程师",
+        "work": "负责网商银行综合金融-会员、转账、存款等相关业务的需求评审、技术调研、整体设计和开发，沉淀银行产品工具函数、组件和hooks库，并负责开户sdk、无线收银台和存款sdk的设计和实现。线上监控、质量跟踪，用户体验和产品性能的持续优化。"
+      },
+      {
+        "company": "北京嘀嘀无限科技发展有限公司",
+        "duration": ["2018.04", "2019.04"],
+        "position": "高级软件开发工程师",
+        "work": "负责滴滴先锋国内和国际版的需求评审、技术调研、整体设计和开发，参与mis系统的开发和基础组件封装，国际化技术方案落地，从技术角度优化app以提升用户的体验和工作效率"
+      }
+    ],
+    "education": [
+      {
+        "school": "东南大学",
+        "degree": "计算机本科学位",
+        "duration": ["2012.09", "2016.06"]
+      }
+    ],
+    "contact": {
+      "email": "majiapsc@126.com",
+      "cellPhone": "86-13255291786",
+      "gitHub": "https://github.com/Maxpsc",
+      "location": "中国 北京"
+    }
+  },
+  "en": {
+    "name": "Sicheng Peng",
+    "position": "Frontend Expert",
+    "introduction": "",
+    "skills": [
+      {
+        "name": "React Vue TS Node NestJS"
+      }
+    ],
+    "projects": [],
+    "experience": [
+      {
+        "company": "Kuaishou",
+        "duration": ["2021.06", "Present"],
+        "position": "Frontend Expert",
+        "work": "Leading frontend architecture for commercialization channels"
+      }
+    ],
+    "education": [
+      {
+        "school": "Southeast University",
+        "degree": "Bachelor in Computer Science",
+        "duration": ["2012.09", "2016.06"]
+      }
+    ],
+    "contact": {
+      "email": "majiapsc@126.com",
+      "cellPhone": "13255291786",
+      "gitHub": "https://github.com/Maxpsc",
+      "location": "Beijing, China"
+    }
+  }
+}

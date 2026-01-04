@@ -1,0 +1,716 @@
+//reset
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+//variables
+@cyan: #004B62;
+@yahei: Microsoft YaHei;
+
+.center-block() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.border-box() {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  font-family: @yahei;
+}
+
+.font-en {
+  font-family: verdana;
+}
+
+.wrap {
+  width: 100%;
+  background: linear-gradient(to bottom right, #FFF, @cyan 70%, #000);
+  background: -webkit-linear-gradient(to bottom right, #FFF, @cyan 70%, #000);
+
+  header {
+    position: relative;
+    height: 80px;
+    border-bottom: #000 solid 1px;
+    transition: all linear 0.2s;
+
+    h1 {
+      font-family: @yahei;
+      font-weight: normal;
+    }
+  }
+}
+
+.resume {
+  .border-box();
+}
+
+//format resume
+.content {
+  max-width: 1000px;
+  background-color: #FFF;
+  .center-block();
+  padding: 30px 50px;
+  .border-box();
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  font-family: @yahei;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .headLeft {
+    flex: 1;
+    min-width: 0;
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 6px;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      font-size: 14px;
+      color: lighten(@cyan, 20%);
+      letter-spacing: 1px;
+    }
+
+    p {
+      text-indent: 2em;
+      margin-top: 10px;
+    }
+  }
+
+  .contact {
+    text-align: right;
+    line-height: 24px;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 768px) {
+      text-align: left;
+    }
+
+    p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+
+      @media screen and (max-width: 768px) {
+        justify-content: flex-start;
+      }
+    }
+
+    .contactIcon {
+      font-size: 16px;
+      margin-right: 4px;
+    }
+
+    .contactDivider {
+      margin: 0 8px;
+      color: #ccc;
+    }
+
+    a {
+      color: lighten(@cyan, 10%);
+      word-break: break-all;
+
+      &:hover {
+        color: lighten(@cyan, 20%);
+      }
+    }
+  }
+}
+
+.main {
+  font-family: @yahei;
+
+  section {
+    margin: 10px 0;
+    border-top: darken(#CCC, 50%) dotted 1px;
+    overflow: hidden;
+
+    h1 {
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: lighten(@cyan, 10%);
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: italic;
+      color: darken(#CCC, 20%);
+    }
+
+    .skillWrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skillTag {
+      display: inline-flex;
+      padding: 4px 8px;
+      background: #fff;
+      color: lighten(@cyan, 20%);
+      border: lighten(@cyan, 20%) solid 1px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .skill {
+      .border-box();
+      flex: 1;
+      padding: 0 10px;
+
+      @media screen and (max-width: 480px) {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .progressBar {
+        font-size: 24px;
+        letter-spacing: 4px;
+
+        b {
+          font-size: 24px;
+          font-weight: 900;
+          color: lighten(@cyan, 20%);
+        }
+      }
+    }
+
+    .projectList {
+      overflow: hidden;
+
+      .projectItem {
+        margin-bottom: 30px;
+        padding: 20px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-left: 4px solid lighten(@cyan, 20%);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 16px rgba(0, 75, 98, 0.12);
+          transform: translateY(-2px);
+        }
+      }
+
+      .projectHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid lighten(@cyan, 40%);
+
+        h3 {
+          font-size: 18px;
+          color: darken(@cyan, 15%);
+          margin: 0;
+          font-weight: 600;
+          flex: 1;
+        }
+
+        .projectDuration {
+          color: darken(#CCC, 20%);
+          font-size: 14px;
+          font-weight: normal;
+          letter-spacing: 1px;
+          white-space: nowrap;
+          margin-left: 16px;
+        }
+      }
+
+      .projectStructured {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        align-items: flex-start;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+
+      .projectSection {
+        position: relative;
+        padding-left: 16px;
+        flex: 1;
+        min-width: 0;
+
+        .sectionLabel {
+          display: inline-block;
+          font-size: 13px;
+          font-weight: 600;
+          color: lighten(@cyan, 10%);
+          background: lighten(@cyan, 45%);
+          padding: 4px 12px;
+          border-radius: 4px;
+          margin-bottom: 10px;
+          letter-spacing: 0.5px;
+        }
+
+        .sectionList {
+          margin: 0;
+          padding-left: 0;
+
+          li {
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 22px;
+            color: #333;
+
+            &:before {
+              content: '▸';
+              position: absolute;
+              left: 0;
+              color: lighten(@cyan, 20%);
+              font-weight: bold;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .descriptionList {
+        margin: 0;
+        padding-left: 0;
+
+        li {
+          list-style-type: disc;
+          margin: 0 0 8px 20px;
+          font-size: 14px;
+          line-height: 22px;
+          color: #333;
+        }
+      }
+
+      .projectDuties {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px dashed lighten(@cyan, 35%);
+
+        h5 {
+          margin: 0 0 8px 0;
+          font-size: 14px;
+          color: lighten(@cyan, 10%);
+          font-weight: 600;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 0;
+
+          li {
+            list-style-type: disc;
+            margin: 0 0 6px 20px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      // 兼容旧样式
+      li {
+        h4 {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          color: darken(#CCC, 20%);
+          font-weight: normal;
+
+          i {
+            letter-spacing: 2px;
+          }
+        }
+
+        h5 {
+          margin: 6px 0;
+        }
+
+        p {
+          text-indent: 2em;
+        }
+
+        ul {
+          li {
+            list-style-type: disc;
+            margin: 0 0 0 20px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    // 工作经历样式优化
+    .experienceList {
+      .experienceItem {
+        margin-bottom: 24px;
+        padding: 18px 20px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-left: 4px solid lighten(@cyan, 15%);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 16px rgba(0, 75, 98, 0.12);
+          transform: translateY(-2px);
+        }
+
+        .experienceHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          margin-bottom: 8px;
+
+          h3 {
+            font-size: 17px;
+            color: darken(@cyan, 15%);
+            margin: 0;
+            font-weight: 600;
+          }
+
+          .experienceDuration {
+            color: darken(#CCC, 20%);
+            font-size: 13px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            margin-left: 16px;
+          }
+        }
+
+        h4 {
+          font-size: 15px;
+          color: lighten(@cyan, 10%);
+          margin: 0 0 12px 0;
+          font-weight: 500;
+        }
+
+        p {
+          margin: 0;
+          font-size: 14px;
+          line-height: 22px;
+          color: #333;
+          text-indent: 0;
+        }
+      }
+    }
+
+    // 教育背景样式优化
+    .educationList {
+      .educationItem {
+        margin-bottom: 20px;
+        padding: 16px 20px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border-left: 4px solid lighten(@cyan, 25%);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 4px 16px rgba(0, 75, 98, 0.12);
+          transform: translateY(-2px);
+        }
+
+        .educationHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+
+          h3 {
+            font-size: 16px;
+            color: darken(@cyan, 15%);
+            margin: 0 0 6px 0;
+            font-weight: 600;
+          }
+
+          .educationDuration {
+            color: darken(#CCC, 20%);
+            font-size: 13px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            margin-left: 16px;
+          }
+        }
+
+        h4 {
+          font-size: 14px;
+          color: lighten(@cyan, 10%);
+          margin: 0;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+// 主题切换按钮
+.themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, lighten(@cyan, 30%) 0%, lighten(@cyan, 20%) 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 12px rgba(0, 75, 98, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+
+  &:hover {
+    transform: scale(1.1) rotate(20deg);
+    box-shadow: 0 6px 20px rgba(0, 75, 98, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+// 暗黑模式样式
+:global(.dark-mode) {
+  .wrap {
+    background: linear-gradient(to bottom right, #1a1a2e 0%, #16213e 70%, #0f0f1e 100%);
+  }
+
+  .content {
+    background-color: #1e1e2e;
+    color: #e0e0e0;
+
+    p {
+      color: #d0d0d0;
+    }
+  }
+
+  .head {
+    h1 {
+      color: #f0f0f0;
+    }
+
+    h2 {
+      color: lighten(@cyan, 35%);
+    }
+
+    .headLeft {
+      p {
+        color: #d0d0d0;
+      }
+    }
+
+    .contact {
+      p {
+        color: #d0d0d0;
+      }
+
+      a {
+        color: lighten(@cyan, 30%);
+
+        &:hover {
+          color: lighten(@cyan, 40%);
+        }
+      }
+    }
+  }
+
+  .main {
+    section {
+      border-top-color: #3a3a4a;
+
+      h1 {
+        color: lighten(@cyan, 30%);
+      }
+
+      .skillTag {
+        background: #2a2a3a;
+        color: lighten(@cyan, 35%);
+        border-color: lighten(@cyan, 30%);
+      }
+
+      .projectList {
+        .projectItem {
+          background: linear-gradient(135deg, #2a2a3a 0%, #252535 100%);
+          border-left-color: lighten(@cyan, 30%);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+          &:hover {
+            box-shadow: 0 4px 16px rgba(0, 150, 200, 0.2);
+          }
+
+          .projectHeader {
+            border-bottom-color: #3a3a4a;
+
+            h3 {
+              color: lighten(@cyan, 35%);
+            }
+
+            .projectDuration {
+              color: #999;
+            }
+          }
+
+          .projectSection {
+            .sectionLabel {
+              background: lighten(@cyan, 15%);
+              color: #1e1e2e;
+            }
+
+            .sectionList li {
+              color: #d0d0d0;
+
+              &:before {
+                color: lighten(@cyan, 35%);
+              }
+            }
+          }
+
+          .projectDuties {
+            border-top-color: #3a3a4a;
+
+            h5 {
+              color: lighten(@cyan, 30%);
+            }
+
+            ul li {
+              color: #d0d0d0;
+            }
+          }
+        }
+      }
+
+      .experienceList {
+        .experienceItem {
+          background: linear-gradient(135deg, #2a2a3a 0%, #252535 100%);
+          border-left-color: lighten(@cyan, 25%);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+          &:hover {
+            box-shadow: 0 4px 16px rgba(0, 150, 200, 0.2);
+          }
+
+          .experienceHeader {
+            h3 {
+              color: lighten(@cyan, 35%);
+            }
+
+            .experienceDuration {
+              color: #999;
+            }
+          }
+
+          h4 {
+            color: lighten(@cyan, 30%);
+          }
+
+          p {
+            color: #d0d0d0;
+          }
+        }
+      }
+
+      .educationList {
+        .educationItem {
+          background: linear-gradient(135deg, #2a2a3a 0%, #252535 100%);
+          border-left-color: lighten(@cyan, 35%);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+          &:hover {
+            box-shadow: 0 4px 16px rgba(0, 150, 200, 0.2);
+          }
+
+          .educationHeader {
+            h3 {
+              color: lighten(@cyan, 35%);
+            }
+
+            .educationDuration {
+              color: #999;
+            }
+          }
+
+          h4 {
+            color: lighten(@cyan, 30%);
+          }
+        }
+      }
+    }
+  }
+
+  .themeToggle {
+    background: linear-gradient(135deg, #3a3a4a 0%, #2a2a3a 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      box-shadow: 0 6px 20px rgba(0, 150, 200, 0.3);
+    }
+  }
+}
