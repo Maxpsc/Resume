@@ -40,6 +40,8 @@ export interface Experience {
   position: string;
   /** 工作内容的描述。 */
   work: string;
+  /** 该公司期间的项目列表。 */
+  projects?: Project[];
 }
 
 /**
@@ -86,8 +88,6 @@ export interface ResumeInfo {
   photo?: string;
   /** 技能列表。 */
   skills: Skill[];
-  /** 项目列表。 */
-  projects: Project[];
   /** 工作经验列表。 */
   experience: Experience[];
   /** 教育背景列表。 */

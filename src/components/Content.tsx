@@ -9,71 +9,13 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ info, lang }) => {
-  const { name, position, introduction, skills, projects, experience, education, contact } = info;
+  const { name, position, skills, experience, education, contact } = info;
 
   const skillList = skills.map((item, index) => {
     return (
       <div className={style.skillTag} key={index}>
         {item.name}
       </div>
-    );
-  });
-
-  const projectList = projects.map((item, index) => {
-    const contentItems = item.content?.map((content, idx) => <li key={idx}>{content}</li>);
-    const achievementItems = item.achievements?.map((achievement, idx) => <li key={idx}>{achievement}</li>);
-    const duties = item.duty?.map((duty, idx) => <li key={idx}>{duty}</li>);
-
-    return (
-      <li key={index} className={style.projectItem}>
-        <div className={style.projectHeader}>
-          <h3>{item.name}</h3>
-          {item.duration && item.duration.length === 2 ? (
-            <span className={style.projectDuration}>
-              {item.duration[0]}
-              {item.duration[1] ? ` - ${item.duration[1]}` : ''}
-            </span>
-          ) : null}
-        </div>
-
-        
-          <div className={style.projectStructured}>
-            {contentItems && contentItems.length > 0 && (
-              <div className={style.projectSection}>
-                <div className={style.sectionLabel}>具体内容</div>
-                <ul className={style.sectionList}>{contentItems}</ul>
-              </div>
-            )}
-            {achievementItems && achievementItems.length > 0 && (
-              <div className={style.projectSection}>
-                <div className={style.sectionLabel}>结果产出</div>
-                <ul className={style.sectionList}>{achievementItems}</ul>
-              </div>
-            )}
-          </div>
-
-        {duties && duties.length !== 0 ? (
-          <div className={style.projectDuties}>
-            <h5>项目职责</h5>
-            <ul>{duties}</ul>
-          </div>
-        ) : null}
-      </li>
-    );
-  });
-
-  const experienceList = experience.map((item, index) => {
-    return (
-      <li key={index} className={style.experienceItem}>
-        <div className={style.experienceHeader}>
-          <h3>{item.company}</h3>
-          <span className={style.experienceDuration}>
-            {item.duration[0]} - {item.duration[1]}
-          </span>
-        </div>
-        <h4>{item.position}</h4>
-        <p>{item.work}</p>
-      </li>
     );
   });
 
@@ -93,49 +35,112 @@ const Content: React.FC<ContentProps> = ({ info, lang }) => {
 
   return (
     <div className={style.content}>
-      <div className={style.head}>
-        <div className={style.headLeft}>
-          <h1>{name}</h1>
-          <h2>{position}</h2>
-          {introduction && <p>{introduction}</p>}
+      <div className={style.twoColumnLayout}>
+        {/* Left Column - Sidebar */}
+        <div className={style.leftColumn}>
+          <div className={style.profileSection}>
+            <h1 className={style.name}>{name}</h1>
+            <h2 className={style.position}>{position}</h2>
+          </div>
+
+          <section className={style.sidebarSection}>
+            <h3 className={style.sidebarTitle}>{lang === 'zh' ? '联系方式' : 'CONTACT'}</h3>
+            <div className={style.contactList}>
+              <div className={style.contactItem}>
+                <span className={style.contactIcon}>☎️</span>
+                <a href={`tel:${contact.cellPhone}`}>{contact.cellPhone}</a>
+              </div>
+              <div className={style.contactItem}>
+                <span className={style.contactIcon}>✉️</span>
+                <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              </div>
+              <div className={style.contactItem}>
+                <span className={style.contactIcon}>📍</span>
+                <span>{contact.location}</span>
+              </div>
+              <div className={style.contactItem}>
+                <span className={style.contactIcon}>🔗</span>
+                <a href={contact.gitHub} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section className={style.sidebarSection}>
+            <h3 className={style.sidebarTitle}>{lang === 'zh' ? '教育背景' : 'EDUCATION'}</h3>
+            <ul className={style.educationList}>{educationList}</ul>
+          </section>
+
+          <section className={style.sidebarSection}>
+            <h3 className={style.sidebarTitle}>{lang === 'zh' ? 'KEYWORDS' : 'SKILLS'}</h3>
+            <div className={style.skillWrap}>{skillList}</div>
+          </section>
         </div>
-        <div className={style.contact}>
-          <p>
-            <span className={style.contactIcon}>📍</span>
-            {contact.location}
-          </p>
-          <p>
-            <span className={style.contactIcon}>✉️</span>
-            <a href={`mailto:${contact.email}`}>{contact.email}</a>
-            <span className={style.contactDivider}>|</span>
-            <span className={style.contactIcon}>☎️</span>
-            <a href={`tel:${contact.cellPhone}`}>{contact.cellPhone}</a>
-          </p>
-          <p>
-            <span className={style.contactIcon}>🔗</span>
-            <a href={contact.gitHub} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </p>
+
+        {/* Right Column - Main Content */}
+        <div className={style.rightColumn}>
+          <section className={style.mainSection}>
+            <h3 className={style.mainTitle}>{lang === 'zh' ? '工作经历 & 重点项目' : 'EXPERIENCE & PROJECTS'}</h3>
+            <div className={style.experienceTimeline}>
+              {experience.map((exp, expIndex) => {
+                const companyProjects = exp.projects || [];
+                
+                return (
+                  <div key={expIndex} className={style.experienceBlock}>
+                    <div className={style.experienceHeader}>
+                      <h3>{exp.company}</h3>
+                      <span className={style.experienceDuration}>
+                        {exp.duration[0]} - {exp.duration[1]}
+                      </span>
+                    </div>
+                    <h4 className={style.experiencePosition}>{exp.position}</h4>
+                    <p className={style.experienceWork}>{exp.work}</p>
+                    
+                    {companyProjects.length > 0 && (
+                      <div className={style.projectsUnderCompany}>
+                        {companyProjects.map((project, projIndex) => {
+                          const contentItems = project.content?.map((content: string, idx: number) => <li key={idx}>{content}</li>);
+                          const achievementItems = project.achievements?.map((achievement: string, idx: number) => <li key={idx}>{achievement}</li>);
+                          const duties = project.duty?.map((duty: string, idx: number) => <li key={idx}>{duty}</li>);
+
+                          return (
+                            <div key={projIndex} className={style.projectItem}>
+                              <div className={style.projectHeader}>
+                                <h5>{project.name}</h5>
+                                {project.duration && project.duration.length === 2 && (
+                                  <span className={style.projectDuration}>
+                                    {project.duration[0]}
+                                    {project.duration[1] ? ` - ${project.duration[1]}` : ''}
+                                  </span>
+                                )}
+                              </div>
+
+                              {contentItems && contentItems.length > 0 && (
+                                <ul className={style.projectContentList}>{contentItems}</ul>
+                              )}
+                              
+                              {achievementItems && achievementItems.length > 0 && (
+                                <ul className={style.projectAchievementList}>{achievementItems}</ul>
+                              )}
+
+                              {duties && duties.length > 0 && (
+                                <div className={style.projectDuties}>
+                                  <h6>项目职责</h6>
+                                  <ul>{duties}</ul>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         </div>
-      </div>
-      <div className={style.main}>
-        <section>
-          <h1>{lang === 'zh' ? 'Keywords' : 'Skills'}</h1>
-          <div className={style.skillWrap}>{skillList}</div>
-        </section>
-        <section>
-          <h1>{lang === 'zh' ? '工作经历' : 'Experience'}</h1>
-          <ul className={style.experienceList}>{experienceList}</ul>
-        </section>
-        <section>
-          <h1>{lang === 'zh' ? '主要项目介绍' : 'Projects'}</h1>
-          <ul className={style.projectList}>{projectList}</ul>
-        </section>
-        <section>
-          <h1>{lang === 'zh' ? '教育背景' : 'Education'}</h1>
-          <ul className={style.educationList}>{educationList}</ul>
-        </section>
       </div>
     </div>
   );

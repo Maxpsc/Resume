@@ -18,6 +18,8 @@ a:focus {
 
 //variables
 @cyan: #004B62;
+@lightGray: #f5f5f5;
+@sidebarBg: #e8e8e8;
 @yahei: Microsoft YaHei;
 
 .center-block() {
@@ -53,19 +55,14 @@ body,
 
 .wrap {
   width: 100%;
+  min-height: 100vh;
   background: linear-gradient(to bottom right, #FFF, @cyan 70%, #000);
   background: -webkit-linear-gradient(to bottom right, #FFF, @cyan 70%, #000);
+  padding: 20px;
+  .border-box();
 
-  header {
-    position: relative;
-    height: 80px;
-    border-bottom: #000 solid 1px;
-    transition: all linear 0.2s;
-
-    h1 {
-      font-family: @yahei;
-      font-weight: normal;
-    }
+  @media screen and (max-width: 768px) {
+    padding: 10px;
   }
 }
 
@@ -73,256 +70,309 @@ body,
   .border-box();
 }
 
-//format resume
+// Two-column layout
 .content {
   max-width: 1000px;
   background-color: #FFF;
   .center-block();
-  padding: 30px 50px;
   .border-box();
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
   p {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 13px;
+    line-height: 1.6;
   }
 }
 
-.head {
+.twoColumnLayout {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  font-family: @yahei;
+  min-height: 100%;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    gap: 20px;
+  }
+}
+
+// Left Column - Sidebar
+.leftColumn {
+  width: 28%;
+  background-color: @sidebarBg;
+  padding: 40px 25px;
+  .border-box();
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}
+
+.profileSection {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid darken(@sidebarBg, 15%);
+
+  .name {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: darken(@cyan, 10%);
+    text-transform: uppercase;
   }
 
-  .headLeft {
-    flex: 1;
-    min-width: 0;
+  .position {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: lighten(@cyan, 15%);
+    text-transform: uppercase;
+  }
+}
 
-    h1 {
-      font-size: 30px;
-      margin-bottom: 6px;
-      letter-spacing: 3px;
-    }
+.sidebarSection {
+  margin-bottom: 25px;
 
-    h2 {
-      font-size: 14px;
-      color: lighten(@cyan, 20%);
-      letter-spacing: 1px;
-    }
+  .sidebarTitle {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: darken(@cyan, 10%);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    border-bottom: 2px solid lighten(@cyan, 20%);
+    padding-bottom: 6px;
+  }
 
-    p {
-      text-indent: 2em;
-      margin-top: 10px;
+  .introduction {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+  }
+
+  .educationList {
+    .educationItem {
+      margin-bottom: 15px;
+
+      .educationHeader {
+        h3 {
+          font-size: 15px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 4px;
+        }
+
+        .educationDuration {
+          font-size: 12px;
+          color: #666;
+          font-style: italic;
+        }
+      }
+
+      h4 {
+        font-size: 13px;
+        color: #555;
+        font-weight: 400;
+        margin-top: 4px;
+      }
     }
   }
 
-  .contact {
-    text-align: right;
-    line-height: 24px;
-    flex-shrink: 0;
+  .contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-    @media screen and (max-width: 768px) {
-      text-align: left;
-    }
-
-    p {
-      margin: 4px 0;
-      font-size: 14px;
-      color: #666;
+    .contactItem {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
       gap: 6px;
+      font-size: 12px;
+      color: #555;
 
-      @media screen and (max-width: 768px) {
-        justify-content: flex-start;
+      .contactIcon {
+        font-size: 14px;
+        width: 18px;
+      }
+
+      a {
+        color: lighten(@cyan, 10%);
+        transition: color 0.2s;
+        word-break: break-all;
+
+        &:hover {
+          color: @cyan;
+        }
+      }
+
+      span {
+        color: #555;
       }
     }
+  }
 
-    .contactIcon {
-      font-size: 16px;
-      margin-right: 4px;
-    }
+  .skillWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 
-    .contactDivider {
-      margin: 0 8px;
-      color: #ccc;
-    }
-
-    a {
-      color: lighten(@cyan, 10%);
-      word-break: break-all;
-
-      &:hover {
-        color: lighten(@cyan, 20%);
-      }
+    .skillTag {
+      display: inline-flex;
+      padding: 5px 10px;
+      background: #fff;
+      color: lighten(@cyan, 15%);
+      border: 1px solid lighten(@cyan, 20%);
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
     }
   }
 }
 
-.main {
-  font-family: @yahei;
+// Right Column - Main Content
+.rightColumn {
+  width: 72%;
+  padding: 40px 35px;
+  .border-box();
 
-  section {
-    margin: 10px 0;
-    border-top: darken(#CCC, 50%) dotted 1px;
-    overflow: hidden;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}
 
-    h1 {
-      margin: 10px 0;
-      font-size: 20px;
-      font-weight: bold;
-      color: lighten(@cyan, 10%);
+.mainSection {
+  margin-bottom: 25px;
+
+  .mainTitle {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: darken(@cyan, 10%);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid lighten(@cyan, 20%);
+    padding-bottom: 8px;
+  }
+}
+
+// Unified experience and project timeline
+.experienceTimeline {
+  .experienceBlock {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lighten(@cyan, 40%);
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
-    h2 {
-      font-size: 14px;
-      font-weight: normal;
-      font-style: italic;
-      color: darken(#CCC, 20%);
-    }
-
-    .skillWrap {
+    .experienceHeader {
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+      gap: 10px;
 
-    .skillTag {
-      display: inline-flex;
-      padding: 4px 8px;
-      background: #fff;
-      color: lighten(@cyan, 20%);
-      border: lighten(@cyan, 20%) solid 1px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .skill {
-      .border-box();
-      flex: 1;
-      padding: 0 10px;
-
-      @media screen and (max-width: 480px) {
-        text-align: center;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 2px;
       }
 
-      h1 {
-        font-size: 18px;
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: darken(@cyan, 10%);
         margin: 0;
       }
 
-      .progressBar {
-        font-size: 24px;
-        letter-spacing: 4px;
-
-        b {
-          font-size: 24px;
-          font-weight: 900;
-          color: lighten(@cyan, 20%);
-        }
+      .experienceDuration {
+        font-size: 12px;
+        color: #666;
+        white-space: nowrap;
+        font-style: italic;
       }
     }
 
-    .projectList {
-      overflow: hidden;
+    .experiencePosition {
+      font-size: 14px;
+      color: lighten(@cyan, 10%);
+      margin: 0 0 8px 0;
+      font-weight: 500;
+    }
+
+    .experienceWork {
+      margin: 0 0 15px 0;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #555;
+      text-indent: 0;
+    }
+
+    .projectsUnderCompany {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed lighten(@cyan, 35%);
 
       .projectItem {
-        margin-bottom: 30px;
-        padding: 20px;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        border-left: 4px solid lighten(@cyan, 20%);
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        transition: all 0.3s ease;
+        margin-bottom: 15px;
+        // padding-left: 12px;
+        // border-left: 2px solid lighten(@cyan, 30%);
 
-        &:hover {
-          box-shadow: 0 4px 16px rgba(0, 75, 98, 0.12);
-          transform: translateY(-2px);
-        }
-      }
-
-      .projectHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin-bottom: 16px;
-        padding-bottom: 12px;
-        border-bottom: 2px solid lighten(@cyan, 40%);
-
-        h3 {
-          font-size: 18px;
-          color: darken(@cyan, 15%);
-          margin: 0;
-          font-weight: 600;
-          flex: 1;
+        &:last-child {
+          margin-bottom: 0;
         }
 
-        .projectDuration {
-          color: darken(#CCC, 20%);
-          font-size: 14px;
-          font-weight: normal;
-          letter-spacing: 1px;
-          white-space: nowrap;
-          margin-left: 16px;
-        }
-      }
+        .projectHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          margin-bottom: 6px;
+          gap: 10px;
 
-      .projectStructured {
-        display: flex;
-        flex-direction: row;
-        gap: 24px;
-        align-items: flex-start;
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 2px;
+          }
 
-        @media screen and (max-width: 768px) {
-          flex-direction: column;
-          gap: 16px;
-        }
-      }
+          h5 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+          }
 
-      .projectSection {
-        position: relative;
-        padding-left: 16px;
-        flex: 1;
-        min-width: 0;
-
-        .sectionLabel {
-          display: inline-block;
-          font-size: 13px;
-          font-weight: 600;
-          color: lighten(@cyan, 10%);
-          background: lighten(@cyan, 45%);
-          padding: 4px 12px;
-          border-radius: 4px;
-          margin-bottom: 10px;
-          letter-spacing: 0.5px;
+          .projectDuration {
+            font-size: 11px;
+            color: #999;
+            white-space: nowrap;
+            font-style: italic;
+          }
         }
 
-        .sectionList {
-          margin: 0;
+        .projectContentList {
+          margin: 0 0 6px 0;
           padding-left: 0;
 
           li {
             list-style: none;
             position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            font-size: 14px;
-            line-height: 22px;
-            color: #333;
+            padding-left: 15px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #555;
 
             &:before {
-              content: '▸';
+              content: '◦';
               position: absolute;
               left: 0;
               color: lighten(@cyan, 20%);
               font-weight: bold;
+              font-size: 13px;
             }
 
             &:last-child {
@@ -330,185 +380,65 @@ body,
             }
           }
         }
-      }
 
-      .descriptionList {
-        margin: 0;
-        padding-left: 0;
-
-        li {
-          list-style-type: disc;
-          margin: 0 0 8px 20px;
-          font-size: 14px;
-          line-height: 22px;
-          color: #333;
-        }
-      }
-
-      .projectDuties {
-        margin-top: 16px;
-        padding-top: 16px;
-        border-top: 1px dashed lighten(@cyan, 35%);
-
-        h5 {
-          margin: 0 0 8px 0;
-          font-size: 14px;
-          color: lighten(@cyan, 10%);
-          font-weight: 600;
-        }
-
-        ul {
-          margin: 0;
+        .projectAchievementList {
+          margin: 0 0 6px 0;
           padding-left: 0;
 
           li {
-            list-style-type: disc;
-            margin: 0 0 6px 20px;
-            font-size: 14px;
-            line-height: 22px;
+            list-style: none;
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #555;
+
+            &:before {
+              content: '★';
+              position: absolute;
+              left: 0;
+              color: lighten(@cyan, 15%);
+              font-weight: normal;
+              font-size: 11px;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
-      }
 
-      // 兼容旧样式
-      li {
-        h4 {
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 10px;
-          color: darken(#CCC, 20%);
-          font-weight: normal;
+        .projectDuties {
+          margin-top: 8px;
+          padding-top: 8px;
+          border-top: 1px dashed lighten(@cyan, 38%);
 
-          i {
-            letter-spacing: 2px;
+          h6 {
+            margin: 0 0 4px 0;
+            font-size: 12px;
+            color: lighten(@cyan, 10%);
+            font-weight: 600;
           }
-        }
 
-        h5 {
-          margin: 6px 0;
-        }
-
-        p {
-          text-indent: 2em;
-        }
-
-        ul {
-          li {
-            list-style-type: disc;
-            margin: 0 0 0 20px;
-            font-size: 14px;
-            line-height: 24px;
-          }
-        }
-      }
-    }
-
-    // 工作经历样式优化
-    .experienceList {
-      .experienceItem {
-        margin-bottom: 24px;
-        padding: 18px 20px;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        border-left: 4px solid lighten(@cyan, 15%);
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        transition: all 0.3s ease;
-
-        &:hover {
-          box-shadow: 0 4px 16px rgba(0, 75, 98, 0.12);
-          transform: translateY(-2px);
-        }
-
-        .experienceHeader {
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          margin-bottom: 8px;
-
-          h3 {
-            font-size: 17px;
-            color: darken(@cyan, 15%);
+          ul {
             margin: 0;
-            font-weight: 600;
+            padding-left: 0;
+
+            li {
+              list-style-type: disc;
+              margin: 0 0 3px 18px;
+              font-size: 12px;
+              line-height: 1.5;
+            }
           }
-
-          .experienceDuration {
-            color: darken(#CCC, 20%);
-            font-size: 13px;
-            font-weight: normal;
-            letter-spacing: 1px;
-            white-space: nowrap;
-            margin-left: 16px;
-          }
-        }
-
-        h4 {
-          font-size: 15px;
-          color: lighten(@cyan, 10%);
-          margin: 0 0 12px 0;
-          font-weight: 500;
-        }
-
-        p {
-          margin: 0;
-          font-size: 14px;
-          line-height: 22px;
-          color: #333;
-          text-indent: 0;
-        }
-      }
-    }
-
-    // 教育背景样式优化
-    .educationList {
-      .educationItem {
-        margin-bottom: 20px;
-        padding: 16px 20px;
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        border-left: 4px solid lighten(@cyan, 25%);
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        transition: all 0.3s ease;
-
-        &:hover {
-          box-shadow: 0 4px 16px rgba(0, 75, 98, 0.12);
-          transform: translateY(-2px);
-        }
-
-        .educationHeader {
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-
-          h3 {
-            font-size: 16px;
-            color: darken(@cyan, 15%);
-            margin: 0 0 6px 0;
-            font-weight: 600;
-          }
-
-          .educationDuration {
-            color: darken(#CCC, 20%);
-            font-size: 13px;
-            font-weight: normal;
-            letter-spacing: 1px;
-            white-space: nowrap;
-            margin-left: 16px;
-          }
-        }
-
-        h4 {
-          font-size: 14px;
-          color: lighten(@cyan, 10%);
-          margin: 0;
-          font-weight: 500;
         }
       }
     }
   }
 }
 
-// 主题切换按钮
+// Theme toggle button
 .themeToggle {
   position: fixed;
   top: 20px;
@@ -537,7 +467,7 @@ body,
   }
 }
 
-// 暗黑模式样式
+// Dark mode styles
 :global(.dark-mode) {
   .wrap {
     background: linear-gradient(to bottom right, #1a1a2e 0%, #16213e 70%, #0f0f1e 100%);
@@ -546,159 +476,174 @@ body,
   .content {
     background-color: #1e1e2e;
     color: #e0e0e0;
-
-    p {
-      color: #d0d0d0;
-    }
   }
 
-  .head {
-    h1 {
-      color: #f0f0f0;
-    }
+  .leftColumn {
+    background-color: #2a2a3a;
+  }
 
-    h2 {
+  .profileSection {
+    border-bottom-color: #3a3a4a;
+
+    .name {
       color: lighten(@cyan, 35%);
     }
 
-    .headLeft {
-      p {
-        color: #d0d0d0;
+    .position {
+      color: lighten(@cyan, 30%);
+    }
+  }
+
+  .sidebarSection {
+    .sidebarTitle {
+      color: lighten(@cyan, 30%);
+      border-bottom-color: lighten(@cyan, 25%);
+    }
+
+    .introduction {
+      color: #d0d0d0;
+    }
+
+    .educationList {
+      .educationItem {
+        .educationHeader {
+          h3 {
+            color: #e0e0e0;
+          }
+
+          .educationDuration {
+            color: #999;
+          }
+        }
+
+        h4 {
+          color: #c0c0c0;
+        }
       }
     }
 
-    .contact {
-      p {
-        color: #d0d0d0;
-      }
-
-      a {
+    .skillWrap {
+      .skillTag {
+        background: #3a3a4a;
         color: lighten(@cyan, 30%);
+        border-color: lighten(@cyan, 25%);
+      }
+    }
 
-        &:hover {
-          color: lighten(@cyan, 40%);
+    .contactList {
+      .contactItem {
+        color: #d0d0d0;
+
+        a {
+          color: lighten(@cyan, 30%);
+
+          &:hover {
+            color: lighten(@cyan, 35%);
+          }
+        }
+
+        span {
+          color: #d0d0d0;
         }
       }
     }
   }
 
-  .main {
-    section {
-      border-top-color: #3a3a4a;
+  .mainSection {
+    .mainTitle {
+      color: lighten(@cyan, 30%);
+      border-bottom-color: lighten(@cyan, 25%);
+    }
 
-      h1 {
-        color: lighten(@cyan, 30%);
-      }
+    .experienceList {
+      .experienceItem {
+        border-left-color: lighten(@cyan, 30%);
 
-      .skillTag {
-        background: #2a2a3a;
-        color: lighten(@cyan, 35%);
-        border-color: lighten(@cyan, 30%);
-      }
-
-      .projectList {
-        .projectItem {
-          background: linear-gradient(135deg, #2a2a3a 0%, #252535 100%);
-          border-left-color: lighten(@cyan, 30%);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-
-          &:hover {
-            box-shadow: 0 4px 16px rgba(0, 150, 200, 0.2);
+        .experienceHeader {
+          h3 {
+            color: #e0e0e0;
           }
 
-          .projectHeader {
-            border-bottom-color: #3a3a4a;
+          .experienceDuration {
+            color: #999;
+          }
+        }
 
-            h3 {
-              color: lighten(@cyan, 35%);
-            }
+        h4 {
+          color: lighten(@cyan, 25%);
+        }
 
-            .projectDuration {
-              color: #999;
-            }
+        p {
+          color: #d0d0d0;
+        }
+      }
+    }
+
+    .experienceTimeline {
+      .experienceBlock {
+        border-bottom-color: #3a3a4a;
+
+        .experienceHeader {
+          h3 {
+            color: lighten(@cyan, 35%);
           }
 
-          .projectSection {
-            .sectionLabel {
-              background: lighten(@cyan, 15%);
-              color: #1e1e2e;
+          .experienceDuration {
+            color: #999;
+          }
+        }
+
+        .experiencePosition {
+          color: lighten(@cyan, 25%);
+        }
+
+        .experienceWork {
+          color: #d0d0d0;
+        }
+
+        .projectsUnderCompany {
+          border-top-color: #3a3a4a;
+
+          .projectItem {
+            border-left-color: lighten(@cyan, 30%);
+
+            .projectHeader {
+              h5 {
+                color: #e0e0e0;
+              }
+
+              .projectDuration {
+                color: #999;
+              }
             }
 
-            .sectionList li {
+            .projectContentList li {
               color: #d0d0d0;
 
               &:before {
-                color: lighten(@cyan, 35%);
+                color: lighten(@cyan, 30%);
               }
             }
-          }
 
-          .projectDuties {
-            border-top-color: #3a3a4a;
-
-            h5 {
-              color: lighten(@cyan, 30%);
-            }
-
-            ul li {
+            .projectAchievementList li {
               color: #d0d0d0;
-            }
-          }
-        }
-      }
 
-      .experienceList {
-        .experienceItem {
-          background: linear-gradient(135deg, #2a2a3a 0%, #252535 100%);
-          border-left-color: lighten(@cyan, 25%);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-
-          &:hover {
-            box-shadow: 0 4px 16px rgba(0, 150, 200, 0.2);
-          }
-
-          .experienceHeader {
-            h3 {
-              color: lighten(@cyan, 35%);
+              &:before {
+                color: lighten(@cyan, 25%);
+              }
             }
 
-            .experienceDuration {
-              color: #999;
+            .projectDuties {
+              border-top-color: #3a3a4a;
+
+              h6 {
+                color: lighten(@cyan, 25%);
+              }
+
+              ul li {
+                color: #d0d0d0;
+              }
             }
-          }
-
-          h4 {
-            color: lighten(@cyan, 30%);
-          }
-
-          p {
-            color: #d0d0d0;
-          }
-        }
-      }
-
-      .educationList {
-        .educationItem {
-          background: linear-gradient(135deg, #2a2a3a 0%, #252535 100%);
-          border-left-color: lighten(@cyan, 35%);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-
-          &:hover {
-            box-shadow: 0 4px 16px rgba(0, 150, 200, 0.2);
-          }
-
-          .educationHeader {
-            h3 {
-              color: lighten(@cyan, 35%);
-            }
-
-            .educationDuration {
-              color: #999;
-            }
-          }
-
-          h4 {
-            color: lighten(@cyan, 30%);
           }
         }
       }
@@ -712,5 +657,239 @@ body,
     &:hover {
       box-shadow: 0 6px 20px rgba(0, 150, 200, 0.3);
     }
+  }
+}
+
+// Print styles for A4 optimization
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .wrap {
+    background: none !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
+  .content {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .twoColumnLayout {
+    display: flex !important;
+    page-break-inside: avoid;
+  }
+
+  .leftColumn {
+    width: 28% !important;
+    padding: 15px 12px !important;
+    background-color: #f0f0f0 !important;
+  }
+
+  .rightColumn {
+    width: 72% !important;
+    padding: 15px 15px !important;
+  }
+
+  .profileSection {
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+
+    .name {
+      font-size: 22px !important;
+      margin-bottom: 4px !important;
+    }
+
+    .position {
+      font-size: 10px !important;
+    }
+  }
+
+  .sidebarSection {
+    margin-bottom: 12px !important;
+
+    .sidebarTitle {
+      font-size: 10px !important;
+      margin-bottom: 6px !important;
+      padding-bottom: 3px !important;
+    }
+
+    .introduction {
+      font-size: 9px !important;
+      line-height: 1.4 !important;
+    }
+
+    .educationList {
+      .educationItem {
+        margin-bottom: 8px !important;
+
+        .educationHeader {
+          h3 {
+            font-size: 10px !important;
+            margin-bottom: 2px !important;
+          }
+
+          .educationDuration {
+            font-size: 8px !important;
+          }
+        }
+
+        h4 {
+          font-size: 9px !important;
+          margin-top: 2px !important;
+        }
+      }
+    }
+
+    .skillWrap {
+      gap: 4px !important;
+
+      .skillTag {
+        padding: 3px 6px !important;
+        font-size: 8px !important;
+        border-radius: 8px !important;
+      }
+    }
+  }
+
+  .contactSection {
+    gap: 8px !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+
+    .contactItem {
+      font-size: 9px !important;
+      gap: 4px !important;
+
+      .contactIcon {
+        font-size: 10px !important;
+      }
+    }
+  }
+
+  .mainSection {
+    margin-bottom: 10px !important;
+
+    .mainTitle {
+      font-size: 10px !important;
+      margin-bottom: 6px !important;
+      padding-bottom: 3px !important;
+    }
+
+    .experienceTimeline {
+      .experienceBlock {
+        margin-bottom: 12px !important;
+        padding-bottom: 10px !important;
+        page-break-inside: avoid;
+
+        &:last-child {
+          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
+        }
+
+        .experienceHeader {
+          margin-bottom: 3px !important;
+
+          h3 {
+            font-size: 10px !important;
+          }
+
+          .experienceDuration {
+            font-size: 8px !important;
+          }
+        }
+
+        .experiencePosition {
+          font-size: 9px !important;
+          margin-bottom: 3px !important;
+        }
+
+        .experienceWork {
+          font-size: 8px !important;
+          line-height: 1.3 !important;
+          margin-bottom: 6px !important;
+        }
+
+        .projectsUnderCompany {
+          margin-top: 6px !important;
+          padding-top: 6px !important;
+
+          .projectItem {
+            margin-bottom: 8px !important;
+            padding-left: 8px !important;
+            border-left-width: 1px !important;
+
+            &:last-child {
+              margin-bottom: 0 !important;
+            }
+
+            .projectHeader {
+              margin-bottom: 3px !important;
+
+              h5 {
+                font-size: 9px !important;
+              }
+
+              .projectDuration {
+                font-size: 7px !important;
+              }
+            }
+
+            .projectContentList,
+            .projectAchievementList {
+              margin-bottom: 3px !important;
+
+              li {
+                padding-left: 10px !important;
+                margin-bottom: 2px !important;
+                font-size: 8px !important;
+                line-height: 1.3 !important;
+
+                &:before {
+                  font-size: 7px !important;
+                }
+              }
+            }
+
+            .projectDuties {
+              margin-top: 4px !important;
+              padding-top: 4px !important;
+
+              h6 {
+                font-size: 8px !important;
+                margin-bottom: 2px !important;
+              }
+
+              ul li {
+                font-size: 8px !important;
+                line-height: 1.3 !important;
+                margin-bottom: 1px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .themeToggle {
+    display: none !important;
+  }
+
+  // Prevent page breaks
+  .experienceItem,
+  .projectItem,
+  .educationItem {
+    page-break-inside: avoid;
   }
 }
