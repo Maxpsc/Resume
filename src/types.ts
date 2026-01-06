@@ -4,8 +4,6 @@
 export interface Skill {
   /** 技能名称。 */
   name: string;
-  /** 熟练程度（例如：“精通”、“良好”）。 */
-  level?: string;
   /** 技能的简要描述。 */
   description?: string;
 }
@@ -18,14 +16,14 @@ export interface Project {
   name: string;
   /** 项目的开始和结束日期，格式为 [开始, 结束]。 */
   duration?: [string, string];
-  /** 项目的描述或功能列表（兼容旧格式）。 */
-  description?: string[];
-  /** 项目具体内容列表。 */
-  content?: string[];
-  /** 项目结果产出列表。 */
+  /** 职责 */
+  duty: string
+  /** 项目背景 */
+  background?: string;
+  /** 行动 */
+  activities?: string[]
+  /** 取得成果 */
   achievements?: string[];
-  /** 在项目中的职责或任务列表。 */
-  duty?: string[];
 }
 
 /**

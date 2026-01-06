@@ -108,9 +108,8 @@ body,
 }
 
 .profileSection {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid darken(@sidebarBg, 15%);
 
   .name {
     font-size: 34px;
@@ -156,6 +155,9 @@ body,
       margin-bottom: 15px;
 
       .educationHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         h3 {
           font-size: 15px;
           font-weight: 600;
@@ -182,7 +184,7 @@ body,
   .contactList {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 
     .contactItem {
       display: flex;
@@ -214,18 +216,24 @@ body,
 
   .skillWrap {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-direction: column;
+    gap: 12px;
 
-    .skillTag {
-      display: inline-flex;
-      padding: 5px 10px;
-      background: #fff;
-      color: lighten(@cyan, 15%);
-      border: 1px solid lighten(@cyan, 20%);
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 600;
+    .skillItem {
+      .skillName {
+        font-size: 12px;
+        font-weight: 600;
+        color: darken(@cyan, 5%);
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .skillDescription {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #555;
+      }
     }
   }
 }
@@ -233,7 +241,7 @@ body,
 // Right Column - Main Content
 .rightColumn {
   width: 72%;
-  padding: 40px 35px;
+  padding: 40px 32px 20px;
   .border-box();
 
   @media screen and (max-width: 768px) {
@@ -260,8 +268,8 @@ body,
 // Unified experience and project timeline
 .experienceTimeline {
   .experienceBlock {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
     border-bottom: 1px solid lighten(@cyan, 40%);
 
     &:last-child {
@@ -283,29 +291,29 @@ body,
       }
 
       h3 {
+        display: flex;
+        align-items: center;
         font-size: 16px;
         font-weight: 600;
         color: darken(@cyan, 10%);
         margin: 0;
+        b {
+          margin-left: 8px;
+          font-size: 14px;
+          color: lighten(@cyan, 10%);
+        }
       }
 
       .experienceDuration {
-        font-size: 12px;
+        font-size: 14px;
         color: #666;
         white-space: nowrap;
         font-style: italic;
       }
     }
 
-    .experiencePosition {
-      font-size: 14px;
-      color: lighten(@cyan, 10%);
-      margin: 0 0 8px 0;
-      font-weight: 500;
-    }
-
     .experienceWork {
-      margin: 0 0 15px 0;
+      margin: 0 0 8px 0;
       font-size: 13px;
       line-height: 1.6;
       color: #555;
@@ -313,14 +321,10 @@ body,
     }
 
     .projectsUnderCompany {
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px dashed lighten(@cyan, 35%);
-
       .projectItem {
-        margin-bottom: 15px;
-        // padding-left: 12px;
-        // border-left: 2px solid lighten(@cyan, 30%);
+        margin-bottom: 8px;
+        padding-top: 12px;
+        border-top: 1px dashed #16c8ff;
 
         &:last-child {
           margin-bottom: 0;
@@ -330,37 +334,87 @@ body,
           display: flex;
           justify-content: space-between;
           align-items: baseline;
-          margin-bottom: 6px;
+          margin-bottom: 8px;
           gap: 10px;
 
-          @media screen and (max-width: 768px) {
-            flex-direction: column;
-            gap: 2px;
-          }
+          .projectTitleRow {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex: 1;
 
-          h5 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #333;
-            margin: 0;
+            h5 {
+              font-size: 14px;
+              font-weight: 600;
+              color: #333;
+              margin: 0;
+            }
+
+            .projectDuty {
+              font-size: 12px;
+              color: lighten(@cyan, 10%);
+              font-weight: 400;
+            }
           }
 
           .projectDuration {
-            font-size: 11px;
-            color: #999;
-            white-space: nowrap;
+            font-size: 12px;
+            color: #666;
             font-style: italic;
+            white-space: nowrap;
           }
         }
 
-        .projectContentList {
-          margin: 0 0 6px 0;
+        .projectBackground {
+          margin-bottom: 10px;
+          padding-left: 8px;
+          border-left: 2px solid #ccc;
+          font-size: 12px;
+          line-height: 1.6;
+          color: #999;
+          font-style: italic;
+        }
+
+        .projectTwoColumns {
+          display: flex;
+          gap: 12px;
+
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          > .projectSection {
+            flex: 1;
+            min-width: 0;
+          }
+        }
+
+        .projectSection {
+          margin-bottom: 8px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .sectionLabel {
+            font-size: 13px;
+            font-weight: 600;
+            color: darken(@cyan, 5%);
+            margin: 0 0 4px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+        }
+
+        .projectActivitiesList {
+          margin: 0;
           padding-left: 0;
 
           li {
             list-style: none;
             position: relative;
-            padding-left: 15px;
+            padding-left: 12px;
             margin-bottom: 4px;
             font-size: 12px;
             line-height: 1.5;
@@ -372,7 +426,7 @@ body,
               left: 0;
               color: lighten(@cyan, 20%);
               font-weight: bold;
-              font-size: 13px;
+              font-size: 12px;
             }
 
             &:last-child {
@@ -382,54 +436,29 @@ body,
         }
 
         .projectAchievementList {
-          margin: 0 0 6px 0;
+          margin: 0;
           padding-left: 0;
 
           li {
             list-style: none;
             position: relative;
-            padding-left: 15px;
+            padding-left: 12px;
             margin-bottom: 4px;
             font-size: 12px;
             line-height: 1.5;
             color: #555;
 
             &:before {
-              content: '★';
+              content: '•';
               position: absolute;
               left: 0;
               color: lighten(@cyan, 15%);
               font-weight: normal;
-              font-size: 11px;
+              font-size: 12px;
             }
 
             &:last-child {
               margin-bottom: 0;
-            }
-          }
-        }
-
-        .projectDuties {
-          margin-top: 8px;
-          padding-top: 8px;
-          border-top: 1px dashed lighten(@cyan, 38%);
-
-          h6 {
-            margin: 0 0 4px 0;
-            font-size: 12px;
-            color: lighten(@cyan, 10%);
-            font-weight: 600;
-          }
-
-          ul {
-            margin: 0;
-            padding-left: 0;
-
-            li {
-              list-style-type: disc;
-              margin: 0 0 3px 18px;
-              font-size: 12px;
-              line-height: 1.5;
             }
           }
         }
@@ -523,10 +552,14 @@ body,
     }
 
     .skillWrap {
-      .skillTag {
-        background: #3a3a4a;
-        color: lighten(@cyan, 30%);
-        border-color: lighten(@cyan, 25%);
+      .skillItem {
+        .skillName {
+          color: lighten(@cyan, 30%);
+        }
+
+        .skillDescription {
+          color: #d0d0d0;
+        }
       }
     }
 
@@ -593,10 +626,6 @@ body,
           }
         }
 
-        .experiencePosition {
-          color: lighten(@cyan, 25%);
-        }
-
         .experienceWork {
           color: #d0d0d0;
         }
@@ -605,11 +634,21 @@ body,
           border-top-color: #3a3a4a;
 
           .projectItem {
-            border-left-color: lighten(@cyan, 30%);
+            border-top: 1px dashed #16c8ff;
 
             .projectHeader {
-              h5 {
-                color: #e0e0e0;
+              .projectTitleRow {
+                h5 {
+                  color: #e0e0e0;
+                }
+
+                .projectDuty {
+                  color: #999;
+
+                  &:before {
+                    color: lighten(@cyan, 30%);
+                  }
+                }
               }
 
               .projectDuration {
@@ -617,7 +656,18 @@ body,
               }
             }
 
-            .projectContentList li {
+            .projectBackground {
+              // border-left-color: lighten(@cyan, 30%);
+              color: #b0b0b0;
+            }
+
+            .projectSection {
+              .sectionLabel {
+                color: lighten(@cyan, 30%);
+              }
+            }
+
+            .projectActivitiesList li {
               color: #d0d0d0;
 
               &:before {
@@ -630,18 +680,6 @@ body,
 
               &:before {
                 color: lighten(@cyan, 25%);
-              }
-            }
-
-            .projectDuties {
-              border-top-color: #3a3a4a;
-
-              h6 {
-                color: lighten(@cyan, 25%);
-              }
-
-              ul li {
-                color: #d0d0d0;
               }
             }
           }
@@ -752,27 +790,33 @@ body,
     }
 
     .skillWrap {
-      gap: 4px !important;
+      gap: 8px !important;
 
-      .skillTag {
-        padding: 3px 6px !important;
-        font-size: 8px !important;
-        border-radius: 8px !important;
+      .skillItem {
+        .skillName {
+          font-size: 8px !important;
+          margin-bottom: 2px !important;
+        }
+
+        .skillDescription {
+          font-size: 8px !important;
+          line-height: 1.3 !important;
+        }
       }
     }
-  }
 
-  .contactSection {
-    gap: 8px !important;
-    margin-bottom: 15px !important;
-    padding-bottom: 10px !important;
+    .contactList {
+      gap: 8px !important;
+      margin-bottom: 15px !important;
+      padding-bottom: 10px !important;
 
-    .contactItem {
-      font-size: 9px !important;
-      gap: 4px !important;
+      .contactItem {
+        font-size: 9px !important;
+        gap: 4px !important;
 
-      .contactIcon {
-        font-size: 10px !important;
+        .contactIcon {
+          font-size: 10px !important;
+        }
       }
     }
   }
@@ -809,11 +853,6 @@ body,
           }
         }
 
-        .experiencePosition {
-          font-size: 9px !important;
-          margin-bottom: 3px !important;
-        }
-
         .experienceWork {
           font-size: 8px !important;
           line-height: 1.3 !important;
@@ -835,9 +874,18 @@ body,
 
             .projectHeader {
               margin-bottom: 3px !important;
+              gap: 6px !important;
 
-              h5 {
-                font-size: 9px !important;
+              .projectTitleRow {
+                gap: 6px !important;
+
+                h5 {
+                  font-size: 9px !important;
+                }
+
+                .projectDuty {
+                  font-size: 7px !important;
+                }
               }
 
               .projectDuration {
@@ -845,9 +893,30 @@ body,
               }
             }
 
-            .projectContentList,
-            .projectAchievementList {
+            .projectBackground {
+              margin-bottom: 4px !important;
+              padding-left: 8px !important;
+              font-size: 7px !important;
+              line-height: 1.2 !important;
+            }
+
+            .projectTwoColumns {
+              gap: 10px !important;
               margin-bottom: 3px !important;
+            }
+
+            .projectSection {
+              margin-bottom: 3px !important;
+
+              .sectionLabel {
+                font-size: 7px !important;
+                margin-bottom: 2px !important;
+              }
+            }
+
+            .projectActivitiesList,
+            .projectAchievementList {
+              margin: 0 !important;
 
               li {
                 padding-left: 10px !important;
@@ -858,22 +927,6 @@ body,
                 &:before {
                   font-size: 7px !important;
                 }
-              }
-            }
-
-            .projectDuties {
-              margin-top: 4px !important;
-              padding-top: 4px !important;
-
-              h6 {
-                font-size: 8px !important;
-                margin-bottom: 2px !important;
-              }
-
-              ul li {
-                font-size: 8px !important;
-                line-height: 1.3 !important;
-                margin-bottom: 1px !important;
               }
             }
           }
