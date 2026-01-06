@@ -92,7 +92,7 @@ const Content: React.FC<ContentProps> = ({ info, lang }) => {
         {/* Right Column - Main Content */}
         <div className={style.rightColumn}>
           <section className={style.mainSection}>
-            <h3 className={style.mainTitle}>{lang === 'zh' ? '工作经历 & 项目' : 'EXPERIENCE & PROJECTS'}</h3>
+            <h3 className={style.mainTitle}>{lang === 'zh' ? '工作经历 & 项目介绍' : 'EXPERIENCE & PROJECTS'}</h3>
             <div className={style.experienceTimeline}>
               {experience.map((exp, expIndex) => {
                 const companyProjects = exp.projects || [];

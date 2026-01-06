@@ -5,20 +5,20 @@
     "introduction": "具备8年一线互联网公司核心业务前端开发与架构经验，专精于复杂商业SaaS系统、金融产品与AI工程落地。擅长以前端技术驱动产品创新与提效，主导多个从0到1的大型项目落地。",
     "skills": [
       {
-        "name": "行业",
+        "name": "行业经验",
         "description": "金融、支付、商业化、SaaS、PaaS"
       },
       {
-        "name": "技术栈",
+        "name": "核心技能",
         "description": "React、Vue、TS、Node、NestJS"
       },
       {
-        "name": "AI 工程",
-        "description": "LangGraph、Agent 架构、RAG 系统设计"
+        "name": "AI工程",
+        "description": "LangGraph、多Agent架构、RAG系统设计"
       },
       {
         "name": "基础设施",
-        "description": "巨石应用架构、低代码引擎、度量体系建设"
+        "description": "大型应用架构、低代码引擎、度量体系建设"
       }
     ],
     "experience": [
