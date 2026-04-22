@@ -1,9 +1,13 @@
 {
   "zh": {
     "name": "彭斯诚",
-    "position": "前端技术专家",
-    "introduction": "具备8年一线互联网公司核心业务前端开发与架构经验，专精于复杂商业SaaS系统、金融产品与AI工程落地。擅长以前端技术驱动产品创新与提效，主导多个从0到1的大型项目落地。",
+    "position": "前端技术专家 / AI应用工程",
+    "introduction": "多年一线互联网公司核心业务前端开发与架构经验，专精于复杂商业SaaS系统、金融产品与AI工程落地。擅长以前端技术驱动产品创新与提效，主导多个从0到1的大型项目落地。在AI工程领域，主导基于LangGraph的多Agent系统设计与RAG检索架构，具备完整的AI Agent落地经验。",
     "skills": [
+      {
+        "name": "AI工程",
+        "description": "LLM API调用 / LangGraph多Agent架构 / RAG系统设计 / Function Calling / 意图识别 / 流式响应(SSE)"
+      },
       {
         "name": "行业经验",
         "description": "金融、支付、商业化、SaaS、PaaS"
@@ -13,10 +17,6 @@
         "description": "React、Vue、TS、Node、NestJS"
       },
       {
-        "name": "AI工程",
-        "description": "LangGraph、多Agent架构、RAG系统设计"
-      },
-      {
         "name": "基础设施",
         "description": "大型应用架构、低代码引擎、度量体系建设"
       }
@@ -24,18 +24,20 @@
     "experience": [
       {
         "company": "北京达佳信息互联有限公司（快手）",
-        "duration": ["2021.06", "至今"],
+        "duration": ["2021.06", "2026-04"],
         "position": "前端技术专家",
         "work": "负责商业化渠道业务线前端架构、团队管理与技术规划",
         "projects": [
           {
             "name": "物料平台智能化升级",
-            "duration": ["2025.04", "至今"],
+            "duration": ["2025.04", "2026-04"],
             "duty": "项目负责人 & 架构师",
             "background": "为解决已有平台物料生产成本高、消费侧感知弱的痛点，主导设计推动智能化升级",
             "activities": [
-              "基于 LangGraph 设计并实现了多智能体协作架构，构建了涵盖 需求理解 → 组件推荐 → 代码生成 → 实时预览 的全链路智能工作流",
-              "实现多模态输入、意图识别、多轮对话、流式响应等核心能力"
+              "基于 LangGraph 构建多Agent协作系统，实现需求理解→组件推荐→代码生成→预览的自动化工作流",
+              "设计并实现 RAG 检索系统，基于向量数据库支撑智能组件推荐与知识库查询",
+              "集成 Function Calling 实现 Agent 工具调用能力，构建可扩展的工具体系",
+              "实现多模态输入处理、LLM意图识别、多轮对话状态管理与流式SSE响应"
             ],
             "achievements": [
               "AI助手月活40+，月均会话300+",
@@ -149,19 +151,138 @@
   },
   "en": {
     "name": "Sicheng Peng",
-    "position": "Frontend Expert",
-    "introduction": "",
+    "position": "Frontend Expert / AI Application Engineer",
+    "introduction": "8+ years of frontend architecture experience with expertise in AI Agent systems, including LLM integration, multi-agent collaboration frameworks (LangGraph), and RAG-based knowledge retrieval. Led the AI-powered material platform serving 40+ MAU with 300+ monthly conversations, generating 500+ pages and 900+ monthly API calls.",
     "skills": [
       {
-        "name": "React Vue TS Node NestJS"
+        "name": "AI Engineering",
+        "description": "LLM API Integration / LangGraph Multi-Agent Architecture / RAG System Design / Function Calling / Intent Recognition / Streaming Response (SSE)"
+      },
+      {
+        "name": "Frontend Stack",
+        "description": "React, Vue, TypeScript, Node.js, NestJS"
+      },
+      {
+        "name": "Industry Experience",
+        "description": "Fintech, Payment, Commercialization, SaaS, PaaS"
+      },
+      {
+        "name": "Infrastructure",
+        "description": "Large-scale Application Architecture, Low-code Engine, Metrics System"
       }
     ],
     "experience": [
       {
-        "company": "Kuaishou",
+        "company": "Beijing Kuaishou Technology Co., Ltd.",
         "duration": ["2021.06", "Present"],
-        "position": "Frontend Expert",
-        "work": "Leading frontend architecture for commercialization channels"
+        "position": "Frontend Expert / AI Application Engineer",
+        "work": "Leading frontend architecture and AI application engineering for commercialization channels",
+        "projects": [
+          {
+            "name": "AI-Powered Material Platform",
+            "duration": ["2025.04", "Present"],
+            "duty": "Project Lead & Architect",
+            "background": "Led the intelligent upgrade of the material platform to address high production costs and weak consumer perception",
+            "activities": [
+              "Designed multi-agent collaboration workflow using LangGraph (requirement understanding → component recommendation → code generation → preview)",
+              "Implemented RAG retrieval system with vector database for intelligent component recommendation",
+              "Integrated Function Calling for Agent tool invocation, building an extensible tool ecosystem",
+              "Built streaming response infrastructure with SSE for real-time AI assistant interaction"
+            ],
+            "achievements": [
+              "AI Assistant: 40+ MAU, 300+ monthly conversations",
+              "Generated 500+ pages, 900+ monthly API calls for low-code material services"
+            ]
+          },
+          {
+            "name": "Commercial Material Platform Metrics System",
+            "duration": ["2024.01", "2024.12"],
+            "duty": "Project Lead & Architect",
+            "background": "Commercialization lacked comprehensive material consumption data to quantify low-code/full-code component library value",
+            "activities": [
+              "Built material metrics system covering full-code and low-code component usage data",
+              "Developed metrics SDK with page routing analysis and material reference tracking"
+            ],
+            "achievements": [
+              "Provided multi-dimensional metrics for commercialization frontend materials and business teams",
+              "Abstracted source code parsing SDK for e-commerce frontend team"
+            ]
+          },
+          {
+            "name": "Agent Smart Case Tool (Online PPT Editor)",
+            "duration": ["2023.08", "2024.02"],
+            "duty": "Project Lead & Architect",
+            "background": "Built PowerPoint-like online editor for agent sales case creation",
+            "activities": [
+              "Implemented data-driven editor based on low-code engine and PPT DSL",
+              "Designed plugin-based architecture for high extensibility"
+            ],
+            "achievements": [
+              "Generated 2000+ cases, 200+ templates, 100+ daily visits"
+            ]
+          },
+          {
+            "name": "Channel Frontend Architecture Upgrade",
+            "duration": ["2021.12", "2022.12"],
+            "duty": "Project Lead",
+            "background": "Architecture upgrade for multi-platform, multi-terminal code consolidation",
+            "activities": [
+              "Led refactor to unified Monorepo structure with shared component library and dual-end adapter SDK",
+              "Designed dual-platform CI/CD pipeline balancing standardization and business flexibility"
+            ],
+            "achievements": [
+              "Team throughput increased 20%, component library adopted by 3+ business lines"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Ant Financial Services Group (Hometown Cash)",
+        "duration": ["2019.04", "2021.05"],
+        "position": "Senior Frontend Engineer",
+        "work": "Responsible for MyBank comprehensive financial business line (membership, transfers, deposits)",
+        "projects": [
+          {
+            "name": "Open Banking Frontend Capability",
+            "duration": ["2021.02", "2021.05"],
+            "duty": "Core Developer",
+            "background": "Financial capabilities accessed by multiple apps with consistent user experience",
+            "activities": [
+              "Developed personal transfer and deposit products for both Alipay and MyBank apps"
+            ]
+          },
+          {
+            "name": "Mobile Frontend Asset Repository",
+            "duration": ["2020.01", "2020.06"],
+            "duty": "Core Developer",
+            "background": "Outsourced code quality issues and high duplication in financial product pages",
+            "activities": [
+              "Built utility functions, hooks, and UI components with React Hooks state management",
+              "Created unified request layer with Koa middleware for monitoring, tracking, exception handling, and auth"
+            ],
+            "achievements": [
+              "Standardized toolchain adopted by team, improving code quality and reducing onboarding time"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "DiDi Global Inc.",
+        "duration": ["2018.04", "2019.04"],
+        "position": "Senior Software Engineer",
+        "work": "Led architecture design for DiDi Pioneer (domestic and international versions); participated in MIS system development and component封装; implemented internationalization solutions"
+      },
+      {
+        "company": "360 Enterprise Security (now Qi'anxin)",
+        "duration": ["2017.03", "2018.04"],
+        "position": "Frontend Engineer",
+        "work": "Developed web intrusion detection tools with D3 and ECharts; built network threat perception system security detection module"
+      },
+      {
+        "company": "Beijing Bohan Spacetime Innovation Technology Co., Ltd.",
+        "duration": ["2016.06", "2017.02"],
+        "position": "Web Frontend Engineer",
+        "work": "Built PC-side tourism bureau backend management system (SPA) using AngularJS; developed Gansu tourism theme website"
       }
     ],
     "education": [
