@@ -5,16 +5,16 @@ import type { ResumeData } from './types';
 import frontendData from './data/frontend.json';
 import aiFullstackData from './data/ai-fullstack.json';
 
-const toggleStyle: React.CSSProperties = {
-  textAlign: 'center',
-  padding: '16px 0 24px',
-  opacity: 0.25,
-  fontSize: 11,
-  cursor: 'pointer',
-  userSelect: 'none',
-  transition: 'opacity 0.2s',
-  color: '#999',
-};
+// const toggleStyle: React.CSSProperties = {
+//   textAlign: 'center',
+//   padding: '16px 0 24px',
+//   opacity: 0.25,
+//   fontSize: 11,
+//   cursor: 'pointer',
+//   userSelect: 'none',
+//   transition: 'opacity 0.2s',
+//   color: '#999',
+// };
 
 const AppInner: React.FC = () => {
   const location = useLocation();
@@ -38,8 +38,8 @@ const AppInner: React.FC = () => {
       ? (aiFullstackData as unknown as ResumeData)
       : (frontendData as unknown as ResumeData);
 
-  const toggleLabel =
-    version === 'frontend' ? 'AI 全栈版本' : '前端版本';
+  // const toggleLabel =
+  //   version === 'frontend' ? 'AI 全栈版本' : '前端版本';
 
   return (
     <>
@@ -48,7 +48,7 @@ const AppInner: React.FC = () => {
         version={version}
         onSwitchVersion={switchVersion}
       />
-      <div
+      {/* <div
         style={toggleStyle}
         onClick={switchVersion}
         onMouseEnter={(e) => {
@@ -60,7 +60,7 @@ const AppInner: React.FC = () => {
         title={`切换到${toggleLabel}`}
       >
         切换至 {toggleLabel} →
-      </div>
+      </div> */}
     </>
   );
 };

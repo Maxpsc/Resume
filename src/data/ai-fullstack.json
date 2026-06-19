@@ -2,7 +2,7 @@
   "zh": {
     "name": "彭斯诚",
     "position": "AI 全栈工程师",
-    "introduction": "近 10 年前端开发经验，近两年深耕 AI 工程化领域。以 React、TypeScript、Node.js 为核心全栈技术栈，具备 NestJS 后端开发能力。在 AI 应用层有丰富的工程落地经验：基于 LangGraph 设计多 Agent 协作架构，自建 RAG 检索系统支撑智能推荐与知识库查询，集成 Function Calling 构建可扩展的 Agent 工具生态，并通过 SSE 实现实时流式交互。擅长从 0 到 1 交付复杂系统，将 AI 能力与业务场景深度结合。",
+    "introduction": "多年前端开发经验，近两年深耕 AI 工程化领域。以 React、TypeScript、Node.js 为核心全栈技术栈，具备 NestJS 后端开发能力。在 AI 应用层有丰富的工程落地经验：基于 LangGraph 设计多 Agent 协作架构，自建 RAG 检索系统支撑智能推荐与知识库查询，集成 Function Calling 构建可扩展的 Agent 工具生态，并通过 SSE 实现实时流式交互。擅长从 0 到 1 交付复杂系统，将 AI 能力与业务场景深度结合。",
     "skills": [
       {
         "name": "AI 工程",

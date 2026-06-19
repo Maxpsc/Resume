@@ -102,7 +102,7 @@ const Content: React.FC<ContentProps> = ({ info, lang }) => {
                     <div className={style.experienceHeader}>
                       <h3>
                         {exp.company}
-                        <b>{exp.position}</b>
+                        <span>{exp.position}</span>
                       </h3>
                       <span className={style.experienceDuration}>
                         {exp.duration[0]} - {exp.duration[1]}
@@ -142,7 +142,7 @@ const Content: React.FC<ContentProps> = ({ info, lang }) => {
                                 <div className={style.projectTwoColumns}>
                                   {project.activities && project.activities.length > 0 && (
                                     <div className={style.projectSection}>
-                                      <h6 className={style.sectionLabel}>行动</h6>
+                                      {/* <h6 className={style.sectionLabel}>行动</h6> */}
                                       <ul className={style.projectActivitiesList}>
                                         {project.activities.map((activity: string, idx: number) => (
                                           <li key={idx}>{activity}</li>
@@ -153,7 +153,7 @@ const Content: React.FC<ContentProps> = ({ info, lang }) => {
 
                                   {project.achievements && project.achievements.length > 0 && (
                                     <div className={style.projectSection}>
-                                      <h6 className={style.sectionLabel}>成果</h6>
+                                      {/* <h6 className={style.sectionLabel}>成果</h6> */}
                                       <ul className={style.projectAchievementList}>
                                         {project.achievements.map((achievement: string, idx: number) => (
                                           <li key={idx}>{achievement}</li>
