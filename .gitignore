@@ -36,12 +36,4 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 
-# Old files
-package-lock.json
-yarn.lock
-webpack.config.js
-.babelrc
-src/index.js
-src/components/*.js
-src/components/*.scss
-src/components/resume.min.css
+.playwright-cli

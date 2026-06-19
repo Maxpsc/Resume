@@ -1,0 +1,286 @@
+{
+  "zh": {
+    "name": "彭斯诚",
+    "position": "资深前端开发",
+    "introduction": "近 10 年前端开发与架构经验，长期负责商业化、金融、SaaS/PaaS 场景下的复杂系统建设。擅长将前端工程能力与业务目标结合，推动复杂项目从 0 到 1 落地，通过平台化、标准化和数据化手段持续提升研发效率与业务价值。近期主导了 AI Agent 在前端物料平台的工程化落地。",
+    "skills": [
+      {
+        "name": "核心技能",
+        "description": "React、TypeScript、Vue、Node.js、NestJS"
+      },
+      {
+        "name": "前端架构",
+        "description": "大型应用架构、低代码引擎、Monorepo、组件库体系建设"
+      },
+      {
+        "name": "行业经验",
+        "description": "商业化、金融、支付、SaaS、PaaS"
+      },
+      {
+        "name": "AI 应用",
+        "description": "Agent 开发 / RAG 系统集成"
+      }
+    ],
+    "experience": [
+      {
+        "company": "北京达佳信息互联有限公司（快手）",
+        "duration": ["2021.06", "2026.04"],
+        "position": "资深前端开发",
+        "work": "负责商业化渠道业务前端架构、团队管理与技术规划",
+        "projects": [
+          {
+            "name": "【基建】物料平台智能化升级",
+            "duration": ["2025.04", "2026.04"],
+            "duty": "项目负责人 & 架构师",
+            "background": "为解决物料生产成本高、流通弱的问题，主导实现物料Agent",
+            "activities": [
+              "设计物料平台整体架构方案，打通需求理解、组件推荐、代码生成与预览的工程化闭环",
+              "建设结合RAG的组件检索能力，评测数据集和验证机制",
+              "实现多模态输入、SSE流式交互和基于langgraph的多智能体框架"
+            ],
+            "achievements": [
+              "AI 助手月活 40+，月均会话 300+，物料基础服务月均调用 900+ 次",
+              "累计生成页面 500+，成为商业化低码生产力基石"
+            ]
+          },
+          {
+            "name": "【业务】渠道业务-代理商平台",
+            "duration": ["2021-12", "2026-04"],
+            "duty": "项目负责人",
+            "background": "针对一码多平台、多端场景导致代码分散、开发效率低的问题，主导渠道前端架构升级",
+            "activities": [
+              "toB一站式工作台，日常需求支撑，稳定性保障",
+              "主导项目重构为统一的 Monorepo 结构，建设统一业务组件库、工具函数库及双端适配 SDK",
+              "设计并落地双平台 CI/CD 配置方案，兼顾统一规范与业务个性化需求"
+            ]
+          },
+          {
+            "name": "【业务】智能案例工具（在线 PPT 编辑器）",
+            "duration": ["2023.08", "2024.02"],
+            "duty": "项目负责人 & 架构师",
+            "background": "针对代理商销售拜访中案例制作成本高、数据获取难的问题，打造类 PowerPoint 在线编辑工具",
+            "activities": [
+              "基于自研低代码引擎和 PPT DSL，设计数据驱动型编辑器",
+              "通过动态加载组件与插件化机制提升编辑器扩展性"
+            ],
+            "achievements": [
+              "工具累计生成案例 2000+，沉淀模板 200+，日均访问 100+，显著提升销售拜访效率"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "北京蚂蚁云金融信息服务有限公司（蚂蚁金服）",
+        "duration": ["2019.04", "2021.05"],
+        "position": "高级前端工程师",
+        "work": "负责网商银行综合金融业务线（会员、转账、存款）",
+        "projects": [
+          {
+            "name": "开放银行前端能力建设",
+            "duration": ["2021.02", "2021.05"],
+            "duty": "核心开发者",
+            "background": "业务诉求，一套金融能力要在多 app、多产品接入，且保证体验一致",
+            "activities": [
+              "负责网商银行个人转账及存款产品的前端开发，确保在支付宝与网商银行 App 双端的体验一致性"
+            ]
+          },
+          {
+            "name": "移动端前端资产沉淀",
+            "duration": ["2020.01", "2020.06"],
+            "duty": "核心开发者",
+            "background": "外包代码质量不可控，金融产品同类页面代码重复度高",
+            "activities": [
+              "封装工具函数、常用 Hooks 及 UI 组件，实现基于 React Hooks 的统一状态管理框架",
+              "构建通用 Request 层，基于 Koa 中间件模型统一处理监控、埋点、异常拦截和免登"
+            ],
+            "achievements": [
+              "沉淀的工具函数和组件库成为团队开发标准，提升代码质量的同时降低学习和开发成本"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "北京嘀嘀无限科技发展有限公司",
+        "duration": ["2018.04", "2019.04"],
+        "position": "高级软件开发工程师",
+        "work": "负责滴滴先锋国内及国际版架构设计与开发；参与 MIS 系统开发及基础组件封装；落地国际化技术方案"
+      },
+      {
+        "company": "360 企业安全（现奇安信）",
+        "duration": ["2017.03", "2018.04"],
+        "position": "前端开发工程师",
+        "work": "负责 web 失陷检测工具，基于 D3 和 ECharts 开发数据可视化组件。负责网络威胁态势感知系统-安全检测模块的开发工作"
+      },
+      {
+        "company": "北京博翰时空创新科技有限公司",
+        "duration": ["2016.06", "2017.02"],
+        "position": "Web 前端工程师",
+        "work": "使用 AngularJS 搭建 PC 端旅游委后台管理系统（SPA），开发甘肃旅游主题网站"
+      }
+    ],
+    "education": [
+      {
+        "school": "东南大学",
+        "degree": "计算机本科学位",
+        "duration": ["2012.09", "2016.06"]
+      }
+    ],
+    "contact": {
+      "email": "majiapsc@126.com",
+      "cellPhone": "86-13255291786",
+      "gitHub": "https://github.com/Maxpsc",
+      "location": "中国 北京"
+    }
+  },
+  "en": {
+    "name": "Sicheng Peng",
+    "position": "Frontend Expert",
+    "introduction": "Nearly 10 years of frontend development and architecture experience across commercialization, fintech, and SaaS/PaaS domains. Core stack: React and TypeScript, with additional experience in Vue, Node.js, and NestJS. Led the architecture of large-scale frontend projects including an online PPT editor, low-code material platform, and Monorepo engineering systems. Skilled at aligning frontend engineering with business goals — driving complex projects from zero to one, and continuously improving R&D efficiency through platformization, standardization, and data-driven approaches. Recently led the engineering integration of AI Agents into the frontend material platform.",
+    "skills": [
+      {
+        "name": "Core Stack",
+        "description": "React, TypeScript, Vue, Node.js, NestJS"
+      },
+      {
+        "name": "Frontend Architecture",
+        "description": "Large-scale Application Architecture, Low-code Engine, Micro-Frontends, Monorepo Engineering, Component Library Systems"
+      },
+      {
+        "name": "Industry Experience",
+        "description": "Commercialization, Fintech, Payments, SaaS, PaaS"
+      },
+      {
+        "name": "AI Application",
+        "description": "LLM Agent Development / RAG System Integration"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Beijing Kuaishou Technology Co., Ltd.",
+        "duration": ["2021.06", "Present"],
+        "position": "Frontend Expert",
+        "work": "Leading frontend architecture and team management for commercialization channels",
+        "projects": [
+          {
+            "name": "Material Platform Intelligent Upgrade",
+            "duration": ["2025.04", "Present"],
+            "duty": "Project Lead & Architect",
+            "background": "Led the architecture upgrade of the material platform to address high production costs and weak consumer perception, integrating AI-assisted development capabilities",
+            "activities": [
+              "Designed the overall platform architecture, establishing an engineering pipeline from requirement understanding through component recommendation, code generation, and preview",
+              "Built intelligent component recommendation and knowledge base retrieval to improve developer efficiency on the platform",
+              "Implemented multi-modal input processing and real-time streaming interaction for AI-assisted development",
+              "Developed foundational SDK for material services, enabling integration with multiple low-code applications"
+            ],
+            "achievements": [
+              "AI Assistant: 40+ MAU, 300+ monthly conversations; material services: 900+ monthly API calls",
+              "Generated 500+ pages, becoming the productivity cornerstone for commercial low-code development"
+            ]
+          },
+          {
+            "name": "Agent One-Stop Workstation",
+            "duration": ["2024.01", "2024.12"],
+            "duty": "Project Lead & Architect",
+            "background": "Built a one-stop workstation for B2B agents, consolidating material consumption data, campaign performance analytics, and operational tools",
+            "activities": [
+              "Designed the workstation frontend architecture with pluggable multi-module integration and unified state management",
+              "Developed material reference tracking and page routing analysis SDK for multi-dimensional data collection and visualization",
+              "Delivered configurable analytics dashboards and data insights for multiple business lines"
+            ],
+            "achievements": [
+              "Provided multi-dimensional consumption data for commercial frontend materials and business teams, quantifying component library value",
+              "Abstracted source code parsing SDK adopted by e-commerce frontend team as foundational capability"
+            ]
+          },
+          {
+            "name": "Agent Smart Case Tool (Online PPT Editor)",
+            "duration": ["2023.08", "2024.02"],
+            "duty": "Project Lead & Architect",
+            "background": "Built PowerPoint-like online editor for agent sales case creation to reduce manual production cost and simplify data access",
+            "activities": [
+              "Implemented data-driven editor based on proprietary low-code engine and PPT DSL",
+              "Designed plugin-based architecture for high extensibility"
+            ],
+            "achievements": [
+              "Generated 2,000+ cases, 200+ templates, 100+ daily visits, significantly improving sales meeting efficiency"
+            ]
+          },
+          {
+            "name": "Channel Frontend Architecture Upgrade",
+            "duration": ["2021.12", "2022.12"],
+            "duty": "Project Lead",
+            "background": "Architecture upgrade for multi-platform, multi-terminal code consolidation",
+            "activities": [
+              "Led refactor to unified Monorepo structure with shared component library, utility library, and dual-end adapter SDK",
+              "Designed dual-platform CI/CD pipeline balancing standardization and business flexibility"
+            ],
+            "achievements": [
+              "Team throughput increased 20%, component library adopted by 3+ business lines"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Ant Financial Services Group",
+        "duration": ["2019.04", "2021.05"],
+        "position": "Senior Frontend Engineer",
+        "work": "Responsible for MyBank comprehensive financial business line (membership, transfers, deposits)",
+        "projects": [
+          {
+            "name": "Open Banking Frontend Capability",
+            "duration": ["2021.02", "2021.05"],
+            "duty": "Core Developer",
+            "background": "Financial capabilities accessed by multiple apps with consistent user experience",
+            "activities": [
+              "Developed personal transfer and deposit products for both Alipay and MyBank apps"
+            ]
+          },
+          {
+            "name": "Mobile Frontend Asset Repository",
+            "duration": ["2020.01", "2020.06"],
+            "duty": "Core Developer",
+            "background": "Outsourced code quality issues and high duplication in financial product pages",
+            "activities": [
+              "Built utility functions, hooks, and UI components with React Hooks state management framework",
+              "Created unified request layer with Koa middleware for monitoring, tracking, exception handling, and auth"
+            ],
+            "achievements": [
+              "Standardized toolchain adopted by team, improving code quality and reducing onboarding time"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "DiDi Global Inc.",
+        "duration": ["2018.04", "2019.04"],
+        "position": "Senior Software Engineer",
+        "work": "Led architecture design for DiDi Pioneer (domestic and international versions); participated in MIS system development and base component encapsulation; implemented internationalization solutions"
+      },
+      {
+        "company": "360 Enterprise Security (now Qi-AnXin)",
+        "duration": ["2017.03", "2018.04"],
+        "position": "Frontend Engineer",
+        "work": "Developed web intrusion detection tools with D3 and ECharts; built network threat perception system security detection module"
+      },
+      {
+        "company": "Beijing Bohan Spacetime Innovation Technology Co., Ltd.",
+        "duration": ["2016.06", "2017.02"],
+        "position": "Web Frontend Engineer",
+        "work": "Built PC-side tourism bureau backend management system (SPA) using AngularJS; developed Gansu tourism theme website"
+      }
+    ],
+    "education": [
+      {
+        "school": "Southeast University",
+        "degree": "Bachelor in Computer Science",
+        "duration": ["2012.09", "2016.06"]
+      }
+    ],
+    "contact": {
+      "email": "majiapsc@126.com",
+      "cellPhone": "13255291786",
+      "gitHub": "https://github.com/Maxpsc",
+      "location": "Beijing, China"
+    }
+  }
+}
