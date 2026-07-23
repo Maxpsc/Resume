@@ -1,0 +1,280 @@
+{
+  "zh": {
+    "name": "彭斯诚",
+    "position": "AI 应用开发工程师",
+    "introduction": "10 年软件开发与架构经验，长期负责商业化、金融及企业平台建设。曾在快手主导前端组件托管平台的 AI 智能化升级，落地 LangGraph 编排、RAG 检索、多模态输入与 SSE 流式交互。现聚焦 AI Agent 应用开发，独立完成方案设计到工程交付。",
+    "skills": [
+      {
+        "name": "AI 应用",
+        "description": "LLM 应用开发 / LangGraph / RAG / Tool Calling / 多模态交互 / SSE 流式响应"
+      },
+      {
+        "name": "全栈开发",
+        "description": "React、Next.js、TypeScript、NestJS"
+      },
+      {
+        "name": "架构经验",
+        "description": "复杂系统架构、低代码引擎、组件平台"
+      },
+      {
+        "name": "业务领域",
+        "description": "商业化、金融、支付、SaaS、PaaS"
+      }
+    ],
+    "experience": [
+      {
+        "company": "独立开发",
+        "duration": ["2026.04", "至今"],
+        "position": "AI 应用开发者",
+        "work": "系统学习大模型应用开发知识，并结合过去项目经验，独立推进面向设计与运营场景的 Creative Agent。",
+        "projects": [
+          {
+            "name": "Creative Agent（启动阶段）",
+            "duration": ["2026.04", "至今"],
+            "duty": "独立开发者",
+            "background": "基于过往企业物料平台经验，探索用 Agent 串联设计需求理解、历史素材检索、模板推荐、文案生成和设计方案输出。",
+            "activities": [
+              "围绕 LLM API、结构化输出、Tool Calling、RAG 与 Agent Workflow 系统补齐大模型应用开发知识",
+              "梳理目标用户、核心场景和 Agent 工作流，收敛首版可演示范围",
+              "当前处于项目启动阶段，产品方案、技术实现和可演示成果待持续补充"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "北京达佳信息互联有限公司（快手）",
+        "duration": ["2021.06", "2026.04"],
+        "position": "资深前端开发",
+        "work": "负责商业化渠道方向前端架构与 AI 应用工程落地，主导前端组件托管平台的智能化升级。",
+        "projects": [
+          {
+            "name": "【基建】前端组件托管平台智能化升级",
+            "duration": ["2025.04", "2026.04"],
+            "duty": "项目负责人 & 核心开发",
+            "background": "在商业化前端组件平台引入物料 Agent，覆盖组件检索、智能推荐、设计稿出码和 On-call 支撑等场景。",
+            "activities": [
+              "整体架构设计与核心功能开发，React、NestJS 前后端分离，基于 LangGraph 编排 Agent 工作流",
+              "建设结合 RAG 的组件检索能力，评测数据集和验证机制",
+              "实现多模态输入与 SSE 流式交互，打通需求理解、组件推荐、代码生成和预览链路"
+            ],
+            "achievements": [
+              "AI 助手月均会话 300+，组件检索命中率90%",
+              "下游低码平台累计生成页面 500+"
+            ]
+          },
+          {
+            "name": "【业务】渠道业务代理商工作台",
+            "duration": ["2021.12", "2026.04"],
+            "duty": "项目负责人",
+            "background": "面向快手商业化广告投放渠道，建设覆盖广告主管理、素材、电商选品、财务和权限的一站式工作台。",
+            "activities": [
+              "负责日常需求交付、稳定性保障与前端技术规划",
+              "主导项目重构为统一 Monorepo，建设业务组件库、工具库和双端适配 SDK",
+              "设计双平台 CI/CD 方案，在统一研发规范的同时支持不同业务的发布需求"
+            ],
+            "achievements": [
+              "快手商业化-广告投放渠道场景-代理商统一工作台"
+            ]
+          },
+          {
+            "name": "【业务】在线 PPT 案例编辑器",
+            "duration": ["2023.08", "2024.02"],
+            "duty": "项目负责人",
+            "background": "针对代理商销售拜访中案例制作成本高、业务数据获取困难的问题，建设类 PowerPoint 在线编辑工具。",
+            "activities": [
+              "基于自研低代码引擎和 PPT DSL 设计数据驱动型编辑器",
+              "通过动态组件加载和插件机制支持模板与业务能力扩展"
+            ],
+            "achievements": [
+              "累计生成案例 2000+，沉淀模板 200+，日均访问 100+"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "北京蚂蚁云金融信息服务有限公司（蚂蚁金服）",
+        "duration": ["2019.04", "2021.05"],
+        "position": "高级前端工程师",
+        "work": "负责网商银行会员、转账和存款业务开发，并推动移动端前端资产沉淀。"
+      },
+      {
+        "company": "北京嘀嘀无限科技发展有限公司",
+        "duration": ["2018.04", "2019.04"],
+        "position": "高级软件开发工程师",
+        "work": "负责滴滴先锋国内版与国际版架构设计及开发，参与 MIS 系统、基础组件与国际化方案建设。"
+      },
+      {
+        "company": "360 企业安全（现奇安信）",
+        "duration": ["2017.03", "2018.04"],
+        "position": "前端开发工程师",
+        "work": "负责 Web 失陷检测与网络威胁态势感知系统开发，使用 D3、ECharts 建设数据可视化能力。"
+      },
+      {
+        "company": "北京博翰时空创新科技有限公司",
+        "duration": ["2016.06", "2017.02"],
+        "position": "Web 前端工程师",
+        "work": "使用 AngularJS 搭建旅游委后台管理系统，并参与甘肃旅游主题网站开发。"
+      }
+    ],
+    "education": [
+      {
+        "school": "东南大学",
+        "degree": "计算机科学与技术专业 本科学位",
+        "duration": ["2012.09", "2016.06"]
+      }
+    ],
+    "contact": {
+      "email": "majiapsc@126.com",
+      "cellPhone": "86-13255291786",
+      "gitHub": "https://github.com/Maxpsc",
+      "location": "中国 北京"
+    }
+  },
+  "en": {
+    "name": "Sicheng Peng",
+    "position": "AI Application Engineer",
+    "introduction": "Software engineer and architect with 10 years of experience building commercial, financial, and enterprise platforms. At Kuaishou, led the AI Agent upgrade of a frontend component platform, delivering LangGraph orchestration, RAG retrieval, multimodal input, and SSE streaming. Now focused on LLM applications and Agent systems, with end-to-end engineering experience across React, TypeScript, Node.js, and NestJS.",
+    "skills": [
+      {
+        "name": "AI Applications",
+        "description": "LLM Application Development / LangGraph / RAG / Tool Calling / Multimodal Interaction / SSE Streaming"
+      },
+      {
+        "name": "Full-Stack",
+        "description": "React, Next.js, TypeScript, Node.js, NestJS"
+      },
+      {
+        "name": "Engineering",
+        "description": "Complex System Architecture, Low-code Engines, Monorepo, Component Platforms, CI/CD"
+      },
+      {
+        "name": "Domains",
+        "description": "Advertising, E-commerce Marketing, Fintech, Payments, SaaS, PaaS"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Independent Development",
+        "duration": ["2026.04", "Present"],
+        "position": "AI Application Developer",
+        "work": "Systematically studying LLM application development and independently developing Creative Agent based on prior enterprise AI project experience.",
+        "projects": [
+          {
+            "name": "Creative Agent (Early Stage)",
+            "duration": ["2026.04", "Present"],
+            "duty": "Independent Developer",
+            "background": "Exploring an Agent workflow that connects creative brief analysis, historical asset retrieval, template recommendation, copy generation, and design proposal output.",
+            "activities": [
+              "Building practical knowledge of LLM APIs, structured output, tool calling, RAG, and Agent workflows",
+              "Defining target users, primary use cases, and the first demonstrable scope",
+              "The project is at an early stage; implementation details and demonstrable results will be added as development progresses"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Beijing Kuaishou Technology Co., Ltd.",
+        "duration": ["2021.06", "2026.04"],
+        "position": "Senior Frontend Engineer",
+        "work": "Led frontend architecture and AI application engineering for commercial channel products, including the AI upgrade of a frontend component platform.",
+        "projects": [
+          {
+            "name": "Frontend Component Platform AI Upgrade",
+            "duration": ["2025.04", "2026.04"],
+            "duty": "Project Lead & Architect",
+            "background": "Introduced a material Agent into commercial frontend infrastructure for component retrieval, intelligent recommendation, design-to-code, and On-call support.",
+            "activities": [
+              "Led architecture and core implementation using a separated React and NestJS stack, with LangGraph for Agent workflow orchestration",
+              "Built RAG-based component retrieval with evaluation datasets and validation mechanisms",
+              "Implemented multimodal input and SSE streaming across requirement understanding, component recommendation, code generation, and preview"
+            ],
+            "achievements": [
+              "300+ monthly AI assistant conversations and 900+ monthly material retrieval API calls",
+              "Integrated with the low-code platform AI and supported the generation of 500+ pages"
+            ]
+          },
+          {
+            "name": "Commercial Channel Agent Workbench",
+            "duration": ["2021.12", "2026.04"],
+            "duty": "Project Lead",
+            "background": "Built a unified workbench for Kuaishou advertising channel operations, covering advertiser management, creative assets, e-commerce selection, finance, and access control.",
+            "activities": [
+              "Owned feature delivery, reliability, and frontend technical planning",
+              "Led the migration to a unified Monorepo with shared components, utilities, and a dual-platform adapter SDK",
+              "Designed CI/CD pipelines that balanced shared engineering standards with product-specific release needs"
+            ],
+            "achievements": [
+              "Served as the unified workbench for Kuaishou advertising channel operations, supporting hundreds of agencies"
+            ]
+          },
+          {
+            "name": "Online PPT Case Editor",
+            "duration": ["2023.08", "2024.02"],
+            "duty": "Project Lead & Architect",
+            "background": "Built a PowerPoint-like editor to reduce the cost of producing sales cases and accessing business data.",
+            "activities": [
+              "Designed a data-driven editor based on a proprietary low-code engine and PPT DSL",
+              "Used dynamic component loading and plugins to extend templates and business capabilities"
+            ],
+            "achievements": [
+              "Generated 2,000+ cases, accumulated 200+ templates, and reached 100+ daily visits"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Ant Financial Services Group",
+        "duration": ["2019.04", "2021.05"],
+        "position": "Senior Frontend Engineer",
+        "work": "Developed MyBank membership, transfer, and deposit products while standardizing reusable mobile frontend assets.",
+        "projects": [
+          {
+            "name": "Mobile Frontend Engineering System",
+            "duration": ["2020.01", "2021.05"],
+            "duty": "Core Developer",
+            "background": "Reduced duplicated development and standardized shared capabilities across multi-platform financial products.",
+            "activities": [
+              "Developed transfer and deposit products with a consistent experience across Alipay and MyBank apps",
+              "Built shared utilities, Hooks, UI components, and a unified request layer based on the Koa middleware model",
+              "Standardized monitoring, analytics, error interception, and authentication-free request handling"
+            ],
+            "achievements": [
+              "The shared toolkit became a team standard and reduced repeated implementation and onboarding effort"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "DiDi Global Inc.",
+        "duration": ["2018.04", "2019.04"],
+        "position": "Senior Software Engineer",
+        "work": "Led architecture and development for domestic and international versions of DiDi Pioneer; contributed to MIS systems, shared components, and internationalization."
+      },
+      {
+        "company": "360 Enterprise Security (now Qi-AnXin)",
+        "duration": ["2017.03", "2018.04"],
+        "position": "Frontend Engineer",
+        "work": "Built web intrusion detection and network threat awareness systems, including data visualizations with D3 and ECharts."
+      },
+      {
+        "company": "Beijing Bohan Spacetime Innovation Technology Co., Ltd.",
+        "duration": ["2016.06", "2017.02"],
+        "position": "Web Frontend Engineer",
+        "work": "Built a tourism administration SPA with AngularJS and contributed to a Gansu tourism website."
+      }
+    ],
+    "education": [
+      {
+        "school": "Southeast University",
+        "degree": "Bachelor of Engineering in Computer Science and Technology",
+        "duration": ["2012.09", "2016.06"]
+      }
+    ],
+    "contact": {
+      "email": "majiapsc@126.com",
+      "cellPhone": "13255291786",
+      "gitHub": "https://github.com/Maxpsc",
+      "location": "Beijing, China"
+    }
+  }
+}

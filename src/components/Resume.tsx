@@ -5,8 +5,6 @@ import style from './resume.module.less';
 
 interface ResumeProps {
   resumeInfo: ResumeData;
-  version?: 'frontend' | 'ai';
-  onSwitchVersion?: () => void;
 }
 
 const Resume: React.FC<ResumeProps> = ({ resumeInfo }) => {
