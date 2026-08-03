@@ -118,7 +118,20 @@ const Content: React.FC<ContentProps> = ({ info, lang }) => {
                             <div key={projIndex} className={style.projectItem}>
                               <div className={style.projectHeader}>
                                 <div className={style.projectTitleRow}>
-                                  <h5>{project.name}</h5>
+                                  <h5>
+                                    {project.link ? (
+                                      <a
+                                        className={style.projectLink}
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                      >
+                                        {project.name} ↗
+                                      </a>
+                                    ) : (
+                                      project.name
+                                    )}
+                                  </h5>
                                   {project.duty && (
                                     <span className={style.projectDuty}>{project.duty}</span>
                                   )}

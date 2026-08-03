@@ -26,17 +26,19 @@
         "company": "独立开发",
         "duration": ["2026.04", "至今"],
         "position": "AI 应用开发者",
-        "work": "系统学习大模型应用开发知识，并结合过去项目经验，独立推进面向设计与运营场景的 Creative Agent。",
+        "work": "系统学习大模型应用开发知识，结合过去业务经验，设计并推进个人项目",
         "projects": [
           {
-            "name": "Creative Agent（启动阶段）",
-            "duration": ["2026.04", "至今"],
+            "name": "酒店智能管家（agent）",
+            "link": "https://github.com/Maxpsc/hotel-robot-agent",
+            "duration": ["2026.07", "至今"],
             "duty": "独立开发者",
-            "background": "基于过往企业物料平台经验，探索用 Agent 串联设计需求理解、历史素材检索、模板推荐、文案生成和设计方案输出。",
+            "background": "设计并实现酒店管家agent MVP，面向住客提供酒店服务问题、房间设备控制、送物确认和任务追踪",
             "activities": [
-              "围绕 LLM API、结构化输出、Tool Calling、RAG 与 Agent Workflow 系统补齐大模型应用开发知识",
-              "梳理目标用户、核心场景和 Agent 工作流，收敛首版可演示范围",
-              "当前处于项目启动阶段，产品方案、技术实现和可演示成果待持续补充"
+              "基于Next.js、FastAPI、PostgreSQL/pgvector、langgraph构建",
+              "通过 Planner / Scheduler / Tool / Evaluator 完成用户目标拆解、执行和评估",
+              "创建送货任务需要用户确认，基于langgraph inject实现可还原的HITL",
+              "基于langfuse建立完整的业务可观测和评估机制，包括全链路分析、多维度指标和评估报告"
             ]
           }
         ]
@@ -49,6 +51,7 @@
         "projects": [
           {
             "name": "【基建】前端组件托管平台智能化升级",
+            "link": "https://github.com/Maxpsc/ai-stream",
             "duration": ["2025.04", "2026.04"],
             "duty": "项目负责人 & 核心开发",
             "background": "在商业化前端组件平台引入物料 Agent，覆盖组件检索、智能推荐、设计稿出码和 On-call 支撑等场景。",
@@ -79,6 +82,7 @@
           {
             "name": "【业务】在线 PPT 案例编辑器",
             "duration": ["2023.08", "2024.02"],
+            "link": "https://github.com/Maxpsc/ppt",
             "duty": "项目负责人",
             "background": "针对代理商销售拜访中案例制作成本高、业务数据获取困难的问题，建设类 PowerPoint 在线编辑工具。",
             "activities": [

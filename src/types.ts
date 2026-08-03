@@ -14,6 +14,8 @@ export interface Skill {
 export interface Project {
   /** 项目名称。 */
   name: string;
+  /** 项目链接（如 GitHub 仓库），配置后项目名称可点击跳转。 */
+  link?: string;
   /** 项目的开始和结束日期，格式为 [开始, 结束]。 */
   duration?: [string, string];
   /** 职责 */
